@@ -4,6 +4,25 @@
   
   
   <entry>
+    <title>Markdown使用指南</title>
+    <link href="/2020/02/14/Markdown%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/"/>
+    <url>/2020/02/14/Markdown%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/</url>
+    
+    <content type="html"><![CDATA[<h2 id="Markdown使用指南"><a href="#Markdown使用指南" class="headerlink" title="Markdown使用指南"></a>Markdown使用指南</h2><h3 id="α-对于文字的操作"><a href="#α-对于文字的操作" class="headerlink" title="α  对于文字的操作"></a>α  对于文字的操作</h3><p>** 中间的部分用粗体表示  如   <strong>我是一只喵</strong></p><p>*  中间的部分表示为斜体 如  <em>本喵想吃小鱼干了</em></p><p>~~ 中间的部分表示为删除线 如  <del>BUG改完了</del></p><p>\ 后加这些特殊符号表示转义，即不产生效果只显示本身符号</p><h3 id="β-对于段落的操作"><a href="#β-对于段落的操作" class="headerlink" title="β  对于段落的操作"></a>β  对于段落的操作</h3><p>1  几级标题就用几个#+标题文字 记得#与文字中间要加一个空格 如 </p><h3 id="看板喵-の-Blog"><a href="#看板喵-の-Blog" class="headerlink" title="看板喵 の Blog"></a>看板喵 の Blog</h3><p>2  &gt; 后的一段会变为引用 如</p><blockquote><p>快起床！BUG要改不完了！</p><p>喵！（炸毛）</p></blockquote><p>3  * 或+ 后的一段会加标识（本喵也不知道这叫什么，反正就这么个东西）</p><p>可以按Tab键进行分级</p><ul><li>喵喵要出去玩~<ul><li>喵喵回来了~</li></ul></li><li>喵喵又要出去玩了~</li></ul><p>4  插入表格</p><p>表格的基本格式</p><blockquote><p>| 喵喵爱吃的菜 | 喵喵不爱吃的零食 |</p><p>| : ————- | : ————- |</p><p>| 小鱼干 | 橘子 |</p><p>| 虾虾  | 干果 |</p></blockquote><p>Command+T 可以插入表格 (Typora)</p><p>5  分割线</p><p>*** 显示分割线</p><hr><p>本喵不喜欢改BUG！</p><hr><h3 id="γ-插入其他元素"><a href="#γ-插入其他元素" class="headerlink" title="γ  插入其他元素"></a>γ  插入其他元素</h3><p>1  插入链接的形式为 [要带链接的文字](网址)  </p><p><a href="https://missisolation.github.io/" target="_blank" rel="noopener">看板喵 の Blog</a></p><p>2  插入图片的形式为 ![图片的名字](图片的地址)</p><p><img src="/Users/apple/Documents/Blog/themes/fluid/source/img/cat.png" srcset="/img/loading.gif" alt="cat"></p><p>（Typora 直接把图片拖进来就可以）</p><p>3  代码框 与数学公式编辑</p><p>代码</p><p>用  `    ` 将代码部分括起来，形成显示代码的区域</p><pre><code class="c++">#include &lt;iostream&gt;using namespace std;int n, m, c1, c2;int e[510][510], weight[510], dis[510], num[510], w[510];bool visit[510];const int inf = 99999999;int main(){    scanf(&quot;%d%d%d%d&quot;, &amp;n, &amp;m, &amp;c1, &amp;c2);    for (int i = 0; i &lt; n; i++)    {        scanf(&quot;%d&quot;, &amp;weight[i]);    }        fill(e[0], e[0] + 510 * 510, inf);    return 0;}</code></pre><p>数学公式<br>$$<br>▽²ψ(x,y,z)+(8π²m/h²)[E-U(x,y,z)]ψ(x,y,z)＝0<br>$$</p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>开发工具</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>About Me - 日常</title>
     <link href="/2019/11/26/About-Me-%E6%97%A5%E5%B8%B8/"/>
     <url>/2019/11/26/About-Me-%E6%97%A5%E5%B8%B8/</url>
