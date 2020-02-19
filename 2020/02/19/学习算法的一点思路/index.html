@@ -16,7 +16,7 @@
   <meta name="description" content="">
   <meta name="author" content="John Doe">
   <meta name="keywords" content="">
-  <title>标签 - 算法笔记 ~ 看板喵 の Blog</title>
+  <title>学习算法的一点思路 ~ 看板喵 の Blog</title>
 
   <link rel="stylesheet" href="/lib/font-awesome/css/all.min.css"  >
 <link rel="stylesheet" href="/lib/bootstrap/css/bootstrap.min.css"  >
@@ -37,7 +37,7 @@
 
 
 <body>
-  <header style="height: 80vh;">
+  <header style="height: 70vh;">
     <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
     <a class="navbar-brand"
@@ -104,7 +104,7 @@
   </div>
 </nav>
 
-    <div class="view intro-2" id="background" parallax=true
+    <div class="view intro-2" id="background" false
          style="background: url('/img/shufang.jpg')no-repeat center center;
            background-size: cover;">
       <div class="full-bg-img">
@@ -114,6 +114,41 @@
               
             </span>
 
+            
+              <br>
+              
+                <p class="mt-3">
+                  <i class="fas fa-calendar-alt" aria-hidden="true"></i>&nbsp;
+                  星期三, 二月 19日 2020, 5:20 下午
+                </p>
+              
+
+              <p>
+                
+                  
+                  &nbsp;<i class="far fa-chart-bar"></i>
+                  <span class="post-count">
+                    874 字
+                  </span>&nbsp;
+                
+
+                
+                  
+                  &nbsp;<i class="far fa-clock"></i>
+                  <span class="post-count">
+                      2 分钟
+                  </span>&nbsp;
+                
+
+                
+                  <!-- 不蒜子统计文章PV -->
+                  
+                  &nbsp;<i class="far fa-eye" aria-hidden="true"></i>&nbsp;
+                  <span id="busuanzi_container_page_pv">
+                    <span id="busuanzi_value_page_pv"></span> 次
+                  </span>&nbsp;
+                
+              </p>
             
           </div>
 
@@ -125,54 +160,97 @@
 
   <main>
     
-      <div class="container nopadding-md">
-        <div class="py-5 z-depth-3" id="board">
-          
-          <div class="container">
-            <div class="row">
-              <div class="col-12 col-md-10 m-auto">
-                
-
-<div class="list-group">
-<!--  <p class="h4">共计 4 篇文章</p>-->
-  <hr>
-  
-    
       
-      <p class="h5">2020</p>
-    
-    <a href="/2020/02/19/%E5%AD%A6%E4%B9%A0%E7%AE%97%E6%B3%95%E7%9A%84%E4%B8%80%E7%82%B9%E6%80%9D%E8%B7%AF/" class="list-group-item list-group-item-action">
-      <span class="archive-post-title">学习算法的一点思路</span>
-      <span style="float: right;">02-19</span>
-    </a>
-  
-    
-    <a href="/2020/02/18/PAT-A1003-Emergency/" class="list-group-item list-group-item-action">
-      <span class="archive-post-title">PAT-A1003 Emergency</span>
-      <span style="float: right;">02-18</span>
-    </a>
-  
-    
-    <a href="/2020/02/18/PAT-A1002-A-B-for-Polynomials/" class="list-group-item list-group-item-action">
-      <span class="archive-post-title">PAT-A1002 A+B for Polynomials</span>
-      <span style="float: right;">02-18</span>
-    </a>
-  
-    
-    <a href="/2020/02/18/PAT-A1001-A-B-Format/" class="list-group-item list-group-item-action">
-      <span class="archive-post-title">PAT-A1001 A+B Format</span>
-      <span style="float: right;">02-18</span>
-    </a>
-  
-</div>
 
+<div class="container-fluid">
+  <div class="row">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-md">
+      <div class="py-5 z-depth-3" id="board">
+        <div class="post-content mx-auto" id="post">
+          <div class="markdown-body">
+            <h2 id="关于学习算法的一点思考"><a href="#关于学习算法的一点思考" class="headerlink" title="关于学习算法的一点思考"></a>关于学习算法的一点思考</h2><h3 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h3><hr>
+<p>作为一个技术狗，数据结构和算法的重要性是毋庸置疑的<del>（比如说像我一样在项目里写各种鸡肋实现方式的时候，你就会体会到这玩意的重要性了）</del>。所以，痛定思痛，决定扎扎实实的把这一块掌握起来，包括但不限于算法的原理，实现方式以及各种应用。</p>
+<h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><hr>
+<p>对于算法的学习，打算从两条线入手，<strong>自顶向下和自底向上</strong>。自顶向下就是从数据结构和算法的书籍入手，一点一点啃，逐步建立起算法的知识体系，即有一个完整而清晰地框架，每个算法的原理，实现方式，以及各个算法之间的联系与区别。而自底向上则是从算法题入手，无论是在LeetCode也好，PAT也好，通过解题来学习算法的应用，思路，从而可以在开发中熟练应用各种算法的知识<del>（当然，从功利角度来说，无论是考研复试还是找工作，算法题是你永远绕不开的坎）</del>。</p>
+<p><strong>而对于算法的训练，应当成为每一个开发者的日常习惯，就如同吃饭喝水一样。</strong>只有日复一日的持续学习，思考，编码过程中，才能将一项技能彻底掌握。当然，并不是说要求每天成小时的使劲做，而是细水长流，每天可以来上几道题，什么时候做都可以，早上起来，午饭后，甚至排队，<del>蹲坑</del>的时候都可以想，可以做，让它成为你生活的一部分，一个习惯。基于以上思考，<strong>计划两天学习一章的算法，每天两道PAT，两道LeetCode（PAT平推，LeetCode每周选一种类型进行刷题）</strong>。</p>
+<h3 id="方式"><a href="#方式" class="headerlink" title="方式"></a>方式</h3><hr>
+<p>而刷算法的思路有了，再说一下方式。</p>
+<p>对于自顶向下来说，相当于课程的学习，逐步推进，没有什么特别要说的，按照三个步骤</p>
+<ul>
+<li><strong>（1）根据书来学习和理解算法</strong></li>
+<li><strong>（2）将算法的原理和思路整理在本子上</strong></li>
+<li><strong>（3）独立的将这个算法及相关编码实现</strong></li>
+</ul>
+<p>对于自底向上，要稍微复杂一点，大致为四个步骤</p>
+<ul>
+<li><p><strong>（1）首先分析问题，确定题目的需求（尤其英文题目，一定要看清楚），分析思路，选择对应的算法</strong></p>
+</li>
+<li><p><strong>（2）查找相应的数据结构与算法，进行学习记录，达到可以独立实现的程度（如果是兔系刷题方式可合并到（3）后）</strong></p>
+</li>
+<li><p><strong>（3）编码实现，有两种方式，第一个是兔系刷题方式</strong></p>
+<ul>
+<li><strong>（a）先去看大佬们的答案，理解代码，整理思路</strong></li>
+<li><strong>（b）然后自己独立的实现一遍，注意比对差距并完善</strong></li>
+</ul>
+<p>​         <strong>另一种是龟系刷题方式</strong></p>
+<ul>
+<li><strong>（a）不论多难，自己来写<del>（实在不会看看也可）</del></strong></li>
+<li><strong>（b）再找大佬的解答不断对比，找差距，完善自己的代码和意识</strong></li>
+</ul>
+</li>
+<li><p><strong>（4）整理题目，包括分析，思路，编码过程等等，整理成Markdown形式，上传到自己的Blog</strong></p>
+<p>（对于具体如何刷题，可以进一步参考知乎大佬们的回答 -&gt; <a href="https://www.zhihu.com/question/280279208/answer/499663699" target="_blank" rel="noopener">胖君</a>）</p>
+</li>
+</ul>
+<p>以上，希望自己可以按照这个思路坚持下来，有所收获。</p>
+<blockquote>
+<p>（1/6 β Project）</p>
+</blockquote>
 
-
-              </div>
-            </div>
+            <hr>
+          </div>
+          <br>
+          <div>
+            <p>
+            
+            
+              <span>
+                <i class="iconfont icon-tag"></i>
+                
+                  <a class="hover-with-bg" href="/tags/%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0">算法笔记</a>
+                
+              </span>
+            
+            </p>
+            
+              <p class="note note-warning">本博客所有文章除特别声明外，均采用 <a href="https://zh.wikipedia.org/wiki/Wikipedia:CC_BY-SA_3.0%E5%8D%8F%E8%AE%AE%E6%96%87%E6%9C%AC" target="_blank" rel="nofollow noopener noopener">CC BY-SA 3.0协议</a> 。转载请注明出处！</p>
+            
           </div>
         </div>
       </div>
+    </div>
+    <div class="d-none d-lg-block col-lg-2 toc-container">
+      
+  <div id="toc">
+    <p class="h4"><i class="far fa-list-alt"></i>&nbsp;目录</p>
+    <div id="tocbot"></div>
+  </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- custom -->
+
+
+<!-- Comments -->
+<div class="col-lg-7 mx-auto nopadding-md">
+  <div class="container comments mx-auto" id="comments">
+    
+  </div>
+</div>
+
     
   </main>
 
@@ -251,6 +329,11 @@
 
 
 
+  
+    <script src="/lib/tocbot/tocbot.min.js" ></script>
+  
+  <script src="/js/post.js" ></script>
+
 
 
   <script src="/lib/smoothscroll/SmoothScroll.min.js" ></script>
@@ -291,7 +374,7 @@
     var typed = new Typed('#subtitle', {
       strings: [
         '  ',
-        "标签 - 算法笔记&nbsp;",
+        "学习算法的一点思路&nbsp;",
       ],
       cursorChar: "_",
       typeSpeed: 70,
