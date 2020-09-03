@@ -1,634 +1,1530 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
 
 
 
-
-
-<head>
-  <meta charset="UTF-8">
-  <link rel="apple-touch-icon" sizes="76x76" href="/img/color_cat.png">
-  <link rel="icon" type="image/png" href="/img/color_cat.png">
-  <meta name="viewport"
-        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
   
-  <meta name="description" content="">
-  <meta name="author" content="John Doe">
-  <meta name="keywords" content="">
+
+
+<html class="theme-next muse use-motion" lang="zh-CN">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="看板喵 の Blog">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;index.html">
+<meta property="og:site_name" content="看板喵 の Blog">
+<meta property="og:locale" content="zh-CN">
+<meta name="twitter:card" content="summary">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/"/>
+
+
+
+
+
   <title>看板喵 の Blog</title>
-
-  <link rel="stylesheet" href="/lib/font-awesome/css/all.min.css"  >
-<link rel="stylesheet" href="/lib/bootstrap/css/bootstrap.min.css"  >
-<link rel="stylesheet" href="/lib/mdbootstrap/css/mdb.min.css"  >
-<link rel="stylesheet" href="/lib/github-markdown/github-markdown.min.css"  >
-<link rel="stylesheet" href="//at.alicdn.com/t/font_1067060_qzomjdt8bmp.css">
+  
 
 
-  <link rel="stylesheet" href="/lib/prettify/tomorrow-night-eighties.min.css"  >
-
-<link rel="stylesheet" href="/css/main.css"  >
 
 
-  <link rel="stylesheet" href="/lib/fancybox/jquery.fancybox.min.css"  >
+
+
 
 
 </head>
 
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
 
-<body>
-  <header style="height: 97vh;">
-    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
-  <div class="container">
-    <a class="navbar-brand"
-       href="/">&nbsp;<strong>看板喵不会改BUG</strong>&nbsp;</a>
+  
+  
+    
+  
 
-    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
-            data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <div class="animated-icon"><span></span><span></span><span></span></div>
-    </button>
+  <div class="container sidebar-position-left 
+  page-home">
+    <div class="headband"></div>
 
-    <!-- Collapsible content -->
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav ml-auto text-center">
-        
-          
-          
-          
-          
-          <li class="nav-item">
-            <a class="nav-link" href="/">首页</a>
-          </li>
-        
-          
-          
-          
-          
-          <li class="nav-item">
-            <a class="nav-link" href="/archives/">归档</a>
-          </li>
-        
-          
-          
-          
-          
-          <li class="nav-item">
-            <a class="nav-link" href="/categories/">分类</a>
-          </li>
-        
-          
-          
-          
-          
-          <li class="nav-item">
-            <a class="nav-link" href="/tags/">标签</a>
-          </li>
-        
-          
-          
-          
-          
-          <li class="nav-item">
-            <a class="nav-link" href="/about/">关于</a>
-          </li>
-        
-        
-          <li class="nav-item" id="search-btn">
-            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;&nbsp;<i
-                class="iconfont icon-search"></i>&nbsp;&nbsp;</a>
-          </li>
-        
-      </ul>
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">看板喵 の Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
     </div>
+      
+        <p class="site-subtitle"></p>
+      
   </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
 </nav>
 
-    <div class="view intro-2" id="background" parallax=true
-         style="background: url('/img/shufang.jpg')no-repeat center center;
-           background-size: cover;">
-      <div class="full-bg-img">
-        <div class="mask rgba-black-light flex-center">
-          <div class="container text-center white-text fadeInUp">
-            <span class="h2" id="subtitle">
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+  <section id="posts" class="posts-expand">
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/02/24/%E9%A1%B9%E7%9B%AE%E5%BC%80%E5%8F%91%E8%B8%A9%E5%9D%91%E6%97%A5%E5%BF%97-1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="看板喵 の Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/02/24/%E9%A1%B9%E7%9B%AE%E5%BC%80%E5%8F%91%E8%B8%A9%E5%9D%91%E6%97%A5%E5%BF%97-1/" itemprop="url">项目开发踩坑日志(+1)</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
               
-            </span>
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-02-24T22:46:37+08:00">
+                2020-02-24
+              </time>
+            
 
             
-          </div>
+
+            
+          </span>
 
           
-            <div class="scroll-down-bar">
-              <i class="fas fa-angle-down scroll-down-arrow"></i>
-            </div>
+
           
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
         </div>
-      </div>
-    </div>
-  </header>
-
-  <main>
-    
-      <div class="container nopadding-md">
-        <div class="py-5 z-depth-3" id="board">
-          
-          <div class="container">
-            <div class="row">
-              <div class="col-12 col-md-10 m-auto">
-                
-
-
-  <div class="row mx-auto index-card">
-    
-    
-    <div class="col-12 col-md-8 mx-auto index-info">
-      <a href="/2020/02/24/%E9%A1%B9%E7%9B%AE%E5%BC%80%E5%8F%91%E8%B8%A9%E5%9D%91%E6%97%A5%E5%BF%97-1/">
-        <p class="h4 index-header">项目开发踩坑日志(+1)</p>
-      </a>
-
-      <a href="/2020/02/24/%E9%A1%B9%E7%9B%AE%E5%BC%80%E5%8F%91%E8%B8%A9%E5%9D%91%E6%97%A5%E5%BF%97-1/">
-        
-        
-          
-        
-        <div class="index-excerpt" >
-          <div class="index-text mb-1">项目开发踩坑日志(+1)十分不情愿的开始了项目开发的工作……
-研究生论文送审平台（学院专家管理模块）花费了完全三天时间完成 项目的 理解分析  代码编写  测试修改并最终验收
-主要功能工作包括 1 基础功能  2 三个附加功能 3 权限与测试
-1 基础功能开放踩坑表单配置
-代码生成
-权限配置
-grid选择框（这个是真的坑，要从mapper一路改到前端）
-
-前端的属性通过封装的直接去别的模块的mapper去取，千万别写错路径
-后端mapper保存的时候也是，注意要改 别名 leftjoin findlist insert 以及update
-
-一些细节的修改
-2 三个附加功能A 根据登录账号秘书身份筛选数据
-B 新增专家的时候根据账号信息去查找相关秘书的信息，填充秘书代码以及高校代码+学院代码字段
-C 在新增专家时，在sys_userz中自动生成一个可登陆的专家用户，并指定权限与身份
-3 权限与测试测试碰到了许许多多数据库字段以及权限相关的报错，都一一解决了。
-总结这个项目坑的地方在于，一茬一茬的人写，留下了一路的坑，有很多模块很多人重复开发过，实际情况与设计文档严重不符，存在各种各样奇奇</div>
-        </div>
-      </a>
-
-      <div class="index-btm">
-        
-          <i class="iconfont icon-riqi2"></i>&nbsp;2020-02-24&nbsp;&nbsp;
-        
-        
-        
-          <i class="iconfont icon-tag"></i>
-          
-            <a href="/tags/%E9%A1%B9%E7%9B%AE%E5%BC%80%E5%8F%91">项目开发</a>&nbsp;
-          
-        
-      </div>
-    </div>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <div class="col-12 col-md-8 mx-auto index-info">
-      <a href="/2020/02/19/%E5%AD%A6%E4%B9%A0%E7%AE%97%E6%B3%95%E7%9A%84%E4%B8%80%E7%82%B9%E6%80%9D%E8%B7%AF/">
-        <p class="h4 index-header">学习算法的一点思路</p>
-      </a>
-
-      <a href="/2020/02/19/%E5%AD%A6%E4%B9%A0%E7%AE%97%E6%B3%95%E7%9A%84%E4%B8%80%E7%82%B9%E6%80%9D%E8%B7%AF/">
-        
-        
-          
-        
-        <div class="index-excerpt" >
-          <div class="index-text mb-1">关于学习算法的一点思考原因
-作为一个技术狗，数据结构和算法的重要性是毋庸置疑的（比如说像我一样在项目里写各种鸡肋实现方式的时候，你就会体会到这玩意的重要性了）。所以，痛定思痛，决定扎扎实实的把这一块掌握起来，包括但不限于算法的原理，实现方式以及各种应用。
-思路
-对于算法的学习，打算从两条线入手，自顶向下和自底向上。自顶向下就是从数据结构和算法的书籍入手，一点一点啃，逐步建立起算法的知识体系，即有一个完整而清晰地框架，每个算法的原理，实现方式，以及各个算法之间的联系与区别。而自底向上则是从算法题入手，无论是在LeetCode也好，PAT也好，通过解题来学习算法的应用，思路，从而可以在开发中熟练应用各种算法的知识（当然，从功利角度来说，无论是考研复试还是找工作，算法题是你永远绕不开的坎）。
-而对于算法的训练，应当成为每一个开发者的日常习惯，就如同吃饭喝水一样。只有日复一日的持续学习，思考，编码过程中，才能将一项技能彻底掌握。当然，并不是说要求每天成小时的使劲做，而是细水长流，每天可以来上几道题，什么时候做都可以，早上起来，午饭后，甚至排队，蹲坑的时候都可以想，可以做，让它成为你生活的一部分</div>
-        </div>
-      </a>
-
-      <div class="index-btm">
-        
-          <i class="iconfont icon-riqi2"></i>&nbsp;2020-02-19&nbsp;&nbsp;
-        
-        
-        
-          <i class="iconfont icon-tag"></i>
-          
-            <a href="/tags/%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0">算法笔记</a>&nbsp;
-          
-        
-      </div>
-    </div>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <div class="col-12 col-md-8 mx-auto index-info">
-      <a href="/2020/02/18/PAT-A1003-Emergency/">
-        <p class="h4 index-header">PAT-A1003 Emergency</p>
-      </a>
-
-      <a href="/2020/02/18/PAT-A1003-Emergency/">
-        
-        
-          
-        
-        <div class="index-excerpt" >
-          <div class="index-text mb-1">A1003 Emergency （Dijkstra算法）问题As an emergency rescue team leader of a city, you are given a special map of your country. The map shows several scattered cities connected by some roads. Amount of rescue teams in each city and the length of each road between any pair of cities are marked on the map. When there is an emergency call to you from some other city, your job is to lead your men to the place as quickly as possible, and at the mean time, call up as many hands on the way as possible.
-
-Input</div>
-        </div>
-      </a>
-
-      <div class="index-btm">
-        
-          <i class="iconfont icon-riqi2"></i>&nbsp;2020-02-18&nbsp;&nbsp;
-        
-        
-        
-          <i class="iconfont icon-tag"></i>
-          
-            <a href="/tags/%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0">算法笔记</a>&nbsp;
-          
-        
-      </div>
-    </div>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <div class="col-12 col-md-8 mx-auto index-info">
-      <a href="/2020/02/18/PAT-A1002-A-B-for-Polynomials/">
-        <p class="h4 index-header">PAT-A1002 A+B for Polynomials</p>
-      </a>
-
-      <a href="/2020/02/18/PAT-A1002-A-B-for-Polynomials/">
-        
-        
-          
-        
-        <div class="index-excerpt" >
-          <div class="index-text mb-1">A1002 A+B for Polynomials（模拟）问题This time, you are supposed to find A+B where A and B are two polynomials.
-
-Input Specification:
-
-Each input file contains one test case. Each case occupies 2 lines, and each line contains the information of a polynomial:
-K N1 aN1 *N2 *aN2 … NK aNK
-where K is the number of nonzero terms in the polynomial, N**i and aNi (i=1,2,⋯,K) are the exponents and coefficients, respectively. It is given that 1≤K≤10，0≤N**K&lt;⋯&lt;N2&lt;N1≤1000.
-
-Output Specification:
-
-For each </div>
-        </div>
-      </a>
-
-      <div class="index-btm">
-        
-          <i class="iconfont icon-riqi2"></i>&nbsp;2020-02-18&nbsp;&nbsp;
-        
-        
-        
-          <i class="iconfont icon-tag"></i>
-          
-            <a href="/tags/%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0">算法笔记</a>&nbsp;
-          
-        
-      </div>
-    </div>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <div class="col-12 col-md-8 mx-auto index-info">
-      <a href="/2020/02/18/PAT-A1001-A-B-Format/">
-        <p class="h4 index-header">PAT-A1001 A+B Format</p>
-      </a>
-
-      <a href="/2020/02/18/PAT-A1001-A-B-Format/">
-        
-        
-          
-        
-        <div class="index-excerpt" >
-          <div class="index-text mb-1">A1001 A+B Format（字符串处理）问题Calculate a+b and output the sum in standard format – that is, the digits must be separated into groups of three by commas (unless there are less than four digits).
-
-Input Specification: 
-
-Each input file contains one test case. Each case contains a pair of integers a and b where −106≤a,b≤106. The numbers are separated by a space.
-
-Output Specification: 
-
-For each test case, you should output the sum of a and b in one line. The sum must be written in the standard format.</div>
-        </div>
-      </a>
-
-      <div class="index-btm">
-        
-          <i class="iconfont icon-riqi2"></i>&nbsp;2020-02-18&nbsp;&nbsp;
-        
-        
-        
-          <i class="iconfont icon-tag"></i>
-          
-            <a href="/tags/%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0">算法笔记</a>&nbsp;
-          
-        
-      </div>
-    </div>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <div class="col-12 col-md-8 mx-auto index-info">
-      <a href="/2020/02/14/Markdown%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/">
-        <p class="h4 index-header">Markdown使用指南</p>
-      </a>
-
-      <a href="/2020/02/14/Markdown%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/">
-        
-        
-          
-        
-        <div class="index-excerpt" >
-          <div class="index-text mb-1">Markdown使用指南α  对于文字的操作** 中间的部分用粗体表示  如   我是一只喵
-*  中间的部分表示为斜体 如  本喵想吃小鱼干了
-~~ 中间的部分表示为删除线 如  BUG改完了
-\ 后加这些特殊符号表示转义，即不产生效果只显示本身符号
-β  对于段落的操作1  几级标题就用几个#+标题文字 记得#与文字中间要加一个空格 如 
-看板喵 の Blog2  &gt; 后的一段会变为引用 如
-
-快起床！BUG要改不完了！
-喵！（炸毛）
-
-3  * 或+ 后的一段会加标识（本喵也不知道这叫什么，反正就这么个东西）
-可以按Tab键进行分级
-
-喵喵要出去玩~
-喵喵回来了~
-
-
-喵喵又要出去玩了~
-
-4  插入表格
-表格的基本格式
-
-| 喵喵爱吃的菜 | 喵喵不爱吃的零食 |
-| : ————- | : ————- |
-| 小鱼干 | 橘子 |
-| 虾虾  | 干果 |
-
-Command+T 可以插入表格 (Typora)
-5  分割线
-*** 显示分割线
-
-本喵不喜欢改BUG！
-
-γ  插入其他元素1  插入链接的形式为 [要带链接的文字](网址)  
-看板喵 の Blog
-2  </div>
-        </div>
-      </a>
-
-      <div class="index-btm">
-        
-          <i class="iconfont icon-riqi2"></i>&nbsp;2020-02-14&nbsp;&nbsp;
-        
-        
-        
-          <i class="iconfont icon-tag"></i>
-          
-            <a href="/tags/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7">开发工具</a>&nbsp;
-          
-        
-      </div>
-    </div>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <div class="col-12 col-md-8 mx-auto index-info">
-      <a href="/2019/11/26/About-Me-%E6%97%A5%E5%B8%B8/">
-        <p class="h4 index-header">About Me - 日常</p>
-      </a>
-
-      <a href="/2019/11/26/About-Me-%E6%97%A5%E5%B8%B8/">
-        
-        
-          
-        
-        <div class="index-excerpt" >
-          <div class="index-text mb-1">
-The game has begun . . .
-
-</div>
-        </div>
-      </a>
-
-      <div class="index-btm">
-        
-          <i class="iconfont icon-riqi2"></i>&nbsp;2019-11-26&nbsp;&nbsp;
-        
-        
-        
-          <i class="iconfont icon-tag"></i>
-          
-            <a href="/tags/%E6%97%A5%E5%B8%B8">日常</a>&nbsp;
-          
-        
-      </div>
-    </div>
-  </div>
-
-
-
-
-
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    
-  </main>
-
-  
-    <a class="z-depth-1" id="scroll-top-button" href="#" role="button">
-      <i class="fa fa-chevron-up scroll-top-arrow" aria-hidden="true"></i>
-    </a>
-  
-
-  
-    <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
-     aria-hidden="true">
-  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
-    <div class="modal-content">
-      <div class="modal-header text-center">
-        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
-        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body mx-3">
-        <div class="md-form mb-5">
-          <input type="text" id="local-search-input" class="form-control validate">
-          <label data-error="x" data-success="v"
-                 for="local-search-input">关键词</label>
-        </div>
-        <div class="list-group" id="local-search-result"></div>
-      </div>
-    </div>
-  </div>
-</div>
-  
-
-  <footer class="mt-5">
-  <div class="text-center py-3">
-    <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><b>Hexo</b></a>
-    <i class="iconfont icon-love"></i>
-    <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"> <b>Fluid</b></a>
-    <br>
-
-    
-  
-    <!-- 不蒜子统计PV -->
-    
-    &nbsp;<span id="busuanzi_container_site_pv"></span>总访问量 
-          <span id="busuanzi_value_site_pv"></span> 次&nbsp;
-  
-  
-    <!-- 不蒜子统计UV -->
-    
-    &nbsp;<span id="busuanzi_container_site_uv"></span>总访客数 
-            <span id="busuanzi_value_site_uv"></span> 人&nbsp;
-  
-  <br>
-
-
-
+      </header>
     
 
-
-    <!-- cnzz Analytics icon -->
     
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
-  </div>
-</footer>
-
-<!-- SCRIPTS -->
-<script src="/lib/jquery/jquery.min.js" ></script>
-<script src="/lib/popper/popper.min.js" ></script>
-<script src="/lib/bootstrap/js/bootstrap.min.js" ></script>
-<script src="/lib/mdbootstrap/js/mdb.min.js" ></script>
-<script src="/js/main.js" ></script>
-
-
-  <script src="/js/lazyload.js" ></script>
-
-
-
-
-
-  <script src="/lib/smoothscroll/SmoothScroll.min.js" ></script>
-
-
-
-  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
-
-
-<!-- Plugins -->
-
-
-  
-
-  
-
-  
-
-  
-
-  <!-- cnzz Analytics -->
-  
-
-
-
-  <script src="/lib/prettify/prettify.min.js" ></script>
-  <script>
-    $(document).ready(function () {
-      $('pre').addClass('prettyprint  linenums');
-      prettyPrint();
-    })
-  </script>
-
-
-
-  <script src="/lib/typed/typed.min.js" ></script>
-  <script>
-    var typed = new Typed('#subtitle', {
-      strings: [
-        '  ',
-        "快起来！你的BUG还没改完！&nbsp;",
-      ],
-      cursorChar: "_",
-      typeSpeed: 70,
-      loop: false,
-    });
-    typed.stop();
-    $(document).ready(function () {
-      $(".typed-cursor").addClass("h2");
-      typed.start();
-    });
-  </script>
-
-
-
-  <script src="/lib/anchor/anchor.min.js" ></script>
-  <script>
-    anchors.options = {
-      placement: "right",
-      visible: "false",
       
-    };
-    var el = "h1,h2,h3,h4,h5,h6".split(",");
-    var res = [];
-    for (item of el) {
-      res.push(".markdown-body > " + item)
+      
+
+      
+        
+          
+            <h2 id="项目开发踩坑日志-1"><a href="#项目开发踩坑日志-1" class="headerlink" title="项目开发踩坑日志(+1)"></a>项目开发踩坑日志(+1)</h2><p>十分不情愿的开始了项目开发的工作……</p>
+<h3 id="研究生论文送审平台（学院专家管理模块）"><a href="#研究生论文送审平台（学院专家管理模块）" class="headerlink" title="研究生论文送审平台（学院专家管理模块）"></a>研究生论文送审平台（学院专家管理模块）</h3><p>花费了完全三天时间完成 项目的 理解分析  代码编写  测试修改并最终验收</p>
+<p>主要功能工作包括 1 基础功能  2 三个附加功能 3 权限与测试</p>
+<h3 id="1-基础功能开放踩坑"><a href="#1-基础功能开放踩坑" class="headerlink" title="1 基础功能开放踩坑"></a>1 基础功能开放踩坑</h3><p>表单配置</p>
+<p>代码生成</p>
+<p>权限配置</p>
+<p>grid选择框（这个是真的坑，要从mapper一路改到前端）</p>
+<ul>
+<li>前端的属性通过封装的直接去别的模块的mapper去取，千万别写错路径</li>
+<li>后端mapper保存的时候也是，注意要改 别名 leftjoin findlist insert 以及update</li>
+</ul>
+<p>一些细节的修改</p>
+<h3 id="2-三个附加功能"><a href="#2-三个附加功能" class="headerlink" title="2 三个附加功能"></a>2 三个附加功能</h3><p>A 根据登录账号秘书身份筛选数据</p>
+<p>B 新增专家的时候根据账号信息去查找相关秘书的信息，填充秘书代码以及高校代码+学院代码字段</p>
+<p>C 在新增专家时，在sys_userz中自动生成一个可登陆的专家用户，并指定权限与身份</p>
+<h3 id="3-权限与测试"><a href="#3-权限与测试" class="headerlink" title="3 权限与测试"></a>3 权限与测试</h3><p>测试碰到了许许多多数据库字段以及权限相关的报错，都一一解决了。</p>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>这个项目坑的地方在于，一茬一茬的人写，留下了一路的坑，有很多模块很多人重复开发过，实际情况与设计文档严重不符，存在各种各样奇奇怪怪的表和模块，都不知道要加的这个模块的数据要和哪些模块做关联，其他模块又是怎么工作的，只能自己去看代码理解，估摸着写，估摸着测试，碰到坑就重新写，磕磕绊绊总算是搞定了。模块本身从功能上来说并不是太难，主要是项目管控和开发测试的管理做的太差，文档留的太少，很多都是口头约定然后修改的，为后续模块开发带来了大量困难。从这种事件中可以看出，一个好的工程管理的重要性。</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/02/19/%E5%AD%A6%E4%B9%A0%E7%AE%97%E6%B3%95%E7%9A%84%E4%B8%80%E7%82%B9%E6%80%9D%E8%B7%AF/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="看板喵 の Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/02/19/%E5%AD%A6%E4%B9%A0%E7%AE%97%E6%B3%95%E7%9A%84%E4%B8%80%E7%82%B9%E6%80%9D%E8%B7%AF/" itemprop="url">学习算法的一点思路</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-02-19T17:20:46+08:00">
+                2020-02-19
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="关于学习算法的一点思考"><a href="#关于学习算法的一点思考" class="headerlink" title="关于学习算法的一点思考"></a>关于学习算法的一点思考</h2><h3 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h3><hr>
+<p>作为一个技术狗，数据结构和算法的重要性是毋庸置疑的<del>（比如说像我一样在项目里写各种鸡肋实现方式的时候，你就会体会到这玩意的重要性了）</del>。所以，痛定思痛，决定扎扎实实的把这一块掌握起来，包括但不限于算法的原理，实现方式以及各种应用。</p>
+<h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><hr>
+<p>对于算法的学习，打算从两条线入手，<strong>自顶向下和自底向上</strong>。自顶向下就是从数据结构和算法的书籍入手，一点一点啃，逐步建立起算法的知识体系，即有一个完整而清晰地框架，每个算法的原理，实现方式，以及各个算法之间的联系与区别。而自底向上则是从算法题入手，无论是在LeetCode也好，PAT也好，通过解题来学习算法的应用，思路，从而可以在开发中熟练应用各种算法的知识<del>（当然，从功利角度来说，无论是考研复试还是找工作，算法题是你永远绕不开的坎）</del>。</p>
+<p><strong>而对于算法的训练，应当成为每一个开发者的日常习惯，就如同吃饭喝水一样。</strong>只有日复一日的持续学习，思考，编码过程中，才能将一项技能彻底掌握。当然，并不是说要求每天成小时的使劲做，而是细水长流，每天可以来上几道题，什么时候做都可以，早上起来，午饭后，甚至排队，<del>蹲坑</del>的时候都可以想，可以做，让它成为你生活的一部分，一个习惯。基于以上思考，<strong>计划两天学习一章的算法，每天两道PAT，两道LeetCode（PAT平推，LeetCode每周选一种类型进行刷题）</strong>。</p>
+<h3 id="方式"><a href="#方式" class="headerlink" title="方式"></a>方式</h3><hr>
+<p>而刷算法的思路有了，再说一下方式。</p>
+<p>对于自顶向下来说，相当于课程的学习，逐步推进，没有什么特别要说的，按照三个步骤</p>
+<ul>
+<li><strong>（1）根据书来学习和理解算法</strong></li>
+<li><strong>（2）将算法的原理和思路整理在本子上</strong></li>
+<li><strong>（3）独立的将这个算法及相关编码实现</strong></li>
+</ul>
+<p>对于自底向上，要稍微复杂一点，大致为四个步骤</p>
+<ul>
+<li><p><strong>（1）首先分析问题，确定题目的需求（尤其英文题目，一定要看清楚），分析思路，选择对应的算法</strong></p>
+</li>
+<li><p><strong>（2）查找相应的数据结构与算法，进行学习记录，达到可以独立实现的程度（如果是兔系刷题方式可合并到（3）后）</strong></p>
+</li>
+<li><p><strong>（3）编码实现，有两种方式，第一个是兔系刷题方式</strong></p>
+<ul>
+<li><strong>（a）先去看大佬们的答案，理解代码，整理思路</strong></li>
+<li><strong>（b）然后自己独立的实现一遍，注意比对差距并完善</strong></li>
+</ul>
+<p>​         <strong>另一种是龟系刷题方式</strong></p>
+<ul>
+<li><strong>（a）不论多难，自己来写<del>（实在不会看看也可）</del></strong></li>
+<li><strong>（b）再找大佬的解答不断对比，找差距，完善自己的代码和意识</strong></li>
+</ul>
+</li>
+<li><p><strong>（4）整理题目，包括分析，思路，编码过程等等，整理成Markdown形式，上传到自己的Blog</strong></p>
+<p>（对于具体如何刷题，可以进一步参考知乎大佬们的回答 -&gt; <a href="https://www.zhihu.com/question/280279208/answer/499663699" target="_blank" rel="noopener">胖君</a>）</p>
+</li>
+</ul>
+<p>以上，希望自己可以按照这个思路坚持下来，有所收获。</p>
+<blockquote>
+<p>（1/6 β Project）</p>
+</blockquote>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/02/18/PAT-A1003-Emergency/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="看板喵 の Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/02/18/PAT-A1003-Emergency/" itemprop="url">PAT-A1003 Emergency</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-02-18T09:40:51+08:00">
+                2020-02-18
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="A1003-Emergency-（Dijkstra算法）"><a href="#A1003-Emergency-（Dijkstra算法）" class="headerlink" title="A1003 Emergency （Dijkstra算法）"></a>A1003 Emergency （Dijkstra算法）</h2><h3 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h3><p>As an emergency rescue team leader of a city, you are given a special map of your country. The map shows several scattered cities connected by some roads. Amount of rescue teams in each city and the length of each road between any pair of cities are marked on the map. When there is an emergency call to you from some other city, your job is to lead your men to the place as quickly as possible, and at the mean time, call up as many hands on the way as possible.</p>
+<ul>
+<li>Input Specification:</li>
+</ul>
+<p>Each input file contains one test case. For each test case, the first line contains 4 positive integers: <em>N</em> (≤500) - the number of cities (and the cities are numbered from 0 to <em>N</em>−1), <em>M</em> - the number of roads, <em>C</em>1 and <em>C</em>2 - the cities that you are currently in and that you must save, respectively. The next line contains <em>N</em> integers, where the <em>i</em>-th integer is the number of rescue teams in the <em>i</em>-th city. Then <em>M</em> lines follow, each describes a road with three integers <em>c</em>1, <em>c</em>2 and <em>L</em>, which are the pair of cities connected by a road and the length of that road, respectively. It is guaranteed that there exists at least one path from <em>C</em>1 to <em>C</em>2.</p>
+<ul>
+<li>Output Specification:</li>
+</ul>
+<p>For each test case, print in one line two numbers: the number of different shortest paths between <em>C</em>1 and <em>C</em>2, and the maximum amount of rescue teams you can possibly gather. All the numbers in a line must be separated by exactly one space, and there is no extra space allowed at the end of a line.</p>
+<ul>
+<li>Sample Input:</li>
+</ul>
+<pre><code class="in">5 6 0 2
+1 2 1 5 3
+0 1 1
+0 2 2
+0 3 1
+1 2 1
+2 4 1
+3 4 1</code></pre>
+<ul>
+<li>Sample Output:</li>
+</ul>
+<pre><code class="out">2 4</code></pre>
+<h3 id="思考"><a href="#思考" class="headerlink" title="思考"></a>思考</h3><p>这道题是经典的Dijkstra算法的应用，在求最短路径的基础上多求了最短路径条数以及最短路径的最大点权，难度不大<del>（本喵太菜所以还是做了好久）</del></p>
+<p>Dijkstra算法的核心就在于在n次遍历中，（1）遍历所有点根据最短路径增加点集，（2）以及增加完点集后遍历所有点来更新c1到达每个点的最短路径*<em>(dis[u] + e[u][v] &lt; dis[v]) *</em>。而本题中还要求的最短路径条数和在此基础上最大救援队数目，在（2）的里面加一个判断即可实现</p>
+<h3 id="代码示例"><a href="#代码示例" class="headerlink" title="代码示例"></a>代码示例</h3><pre><code class="c++">#include &lt;iostream&gt;
+#include &lt;algorithm&gt;
+using namespace std;
+
+int n, m, c1, c2;
+//邻接矩阵（边和边权） 点权  c1到任意一点的最短长度  c1到任意一点的最短路径的条数  c1到任意一点的救援队数目之和
+int e[500][500], weight[500], dis[500], num[500], w[500];
+bool visit[510];//作为点的集合
+const int inf = 999999;
+
+int main(){
+
+    scanf(&quot;%d%d%d%d&quot;, &amp;n, &amp;m, &amp;c1, &amp;c2);
+    for (int i = 0; i &lt; n; i++)
+    {
+        scanf(&quot;%d&quot;, &amp;weight[i]);
     }
-    anchors.add(res.join(", "))
-  </script>
+    fill(e[0], e[0] + 500 * 500, inf);
+    fill(dis, dis + 500, inf);
 
-
-
-  <script src="/js/local-search.js" ></script>
-  <script>
-    var path = "/local-search.xml";
-    var inputArea = document.querySelector("#local-search-input");
-    inputArea.onclick = function () {
-      getSearchFile(path);
-      this.onclick = null
+    //初始化邻接矩阵
+    int a, b, c;
+    for (int i = 0; i &lt; m; i++)
+    {
+        scanf(&quot;%d%d%d&quot;,&amp;a,&amp;b,&amp;c);
+        e[a][b] = e[b][a] = c;
     }
-  </script>
+    //初始化c1
+    dis[c1] = 0;
+    w[c1] = weight[c1];
+    num[c1] = 1;
+    for (int i = 0; i &lt; n; i++)
+    {
+        int u = -1;
+        int minn = inf;
+        //遍历所有点，找到到c1路径最短的那个点，加入到点集，直到遍历完所有点为止
+        for (int j = 0; j &lt; n; j++)
+        {   //从c1开始
+            if(visit[j] == false &amp;&amp; dis[j] &lt; minn){
+                u = j;
+                minn = dis[j];
+            }
+        }
+        if (u == -1) break;
+        visit[u] = true;
+        //在点集加了一个点之后，遍历所有点，更新c1到所有点的最短路径
+        for (int v = 0; v &lt; n; v++)
+        {   //如果新点与该点有边
+            if (visit[v] == false &amp;&amp; e[u][v] != inf)
+            {   //如果新点到任一点的距离比原来小，就更新dis
+                if (dis[u] + e[u][v] &lt; dis[v])
+                {
+                    dis[v] = dis[u] + e[u][v];
+                    num[v] = num[u]; //c1到达新点的最短路径条数应该与与他联通的v点相同
+                    w[v] = w[u] + weight[v];
+                }
+                else if (dis[u] + e[u][v] == dis[v])
+                {
+                    num[v] = num[v] + num[u];//新点不变，v点加上刚联通的u点的最短路径条数
+                    if (w[u] + weight[v] &gt; w[v])//如果这条路上的救援队数目更多，就更新
+                    {
+                        w[v] = w[u] + weight[v];
+                    }
+                }
+
+            }
+
+        }
+
+    }
+    printf(&quot;%d %d&quot;,num[c2],w[c2]);
+    return 0;
+}</code></pre>
+<p>(解题时参考了柳婼大大的代码 有兴趣可以去看一下  -&gt; <a href="https://www.liuchuo.net/" target="_blank" rel="noopener">柳婼のBlog</a>)</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/02/18/PAT-A1002-A-B-for-Polynomials/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="看板喵 の Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/02/18/PAT-A1002-A-B-for-Polynomials/" itemprop="url">PAT-A1002 A+B for Polynomials</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-02-18T09:39:45+08:00">
+                2020-02-18
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="A1002-A-B-for-Polynomials（模拟）"><a href="#A1002-A-B-for-Polynomials（模拟）" class="headerlink" title="A1002 A+B for Polynomials（模拟）"></a>A1002 A+B for Polynomials（模拟）</h2><h3 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h3><p>This time, you are supposed to find <em>A</em>+<em>B</em> where <em>A</em> and <em>B</em> are two polynomials.</p>
+<ul>
+<li>Input Specification:</li>
+</ul>
+<p>Each input file contains one test case. Each case occupies 2 lines, and each line contains the information of a polynomial:</p>
+<p><em>K</em> <em>N</em>1 <em>a<strong>N<em>1 *N</em>2 *a</strong>N<em>2 … <em>N</em></em>K</em> <em>a<strong>N</strong>K</em></p>
+<p>where <em>K</em> is the number of nonzero terms in the polynomial, <em>N**i</em> and <em>a<strong>N</strong>i</em> (<em>i</em>=1,2,⋯,<em>K</em>) are the exponents and coefficients, respectively. It is given that 1≤<em>K</em>≤10，0≤<em>N**K</em>&lt;⋯&lt;<em>N</em>2&lt;<em>N</em>1≤1000.</p>
+<ul>
+<li>Output Specification:</li>
+</ul>
+<p>For each test case you should output the sum of <em>A</em> and <em>B</em> in one line, with the same format as the input. Notice that there must be NO extra space at the end of each line. Please be accurate to 1 decimal place.</p>
+<ul>
+<li>Sample Input:</li>
+</ul>
+<pre><code class="in">2 1 2.4 0 3.2
+2 2 1.5 1 0.5</code></pre>
+<ul>
+<li>Sample Output:</li>
+</ul>
+<pre><code class="out">3 2 1.5 1 2.9 0 3.2</code></pre>
+<h3 id="思考"><a href="#思考" class="headerlink" title="思考"></a>思考</h3><p>模拟两个多项式相加并输出结果</p>
+<p>用一个数组来存储多项式的系数，输入哪一项的值，就加到哪一项</p>
+<p>遍历一遍得到多项式的个数</p>
+<p>遍历一遍输出多项式</p>
+<h3 id="代码示例"><a href="#代码示例" class="headerlink" title="代码示例"></a>代码示例</h3><pre><code class="c++">#include &lt;iostream&gt;
+using namespace std;
+int main(){
+
+    float c[1001] = {0};
+    int m,n,t;
+    float num;
+    scanf(&quot;%d&quot;,&amp;m);
+    for (int i = 0; i &lt; m; i++)
+    {
+        scanf(&quot;%d%f&quot;, &amp;t , &amp;num);
+        c[t] += num;
+    }
+    scanf(&quot;%d&quot;,&amp;n);
+    for (int i = 0; i &lt; n; i++)
+    {
+        scanf(&quot;%d%f&quot;,&amp;t,&amp;num);
+        c[t] += num;
+    }
+    int cnt = 0;
+    for (int i = 0; i &lt; 1001; i++)
+    {
+        if (c[i] != 0)
+        {
+            cnt++;
+        }
+    }
+    printf(&quot;%d&quot;,cnt);
+    for (int i = 1000; i &gt;= 0; i--)
+    {
+        if (c[i] != 0.0)
+        {
+            printf(&quot; %d %.1f&quot;, i, c[i]);
+        }
+    }
+    return 0;
+}</code></pre>
+<p>(解题时参考了柳婼大大的代码 有兴趣可以去看一下  -&gt; <a href="https://www.liuchuo.net/" target="_blank" rel="noopener">柳婼のBlog</a>)</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/02/18/PAT-A1001-A-B-Format/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="看板喵 の Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/02/18/PAT-A1001-A-B-Format/" itemprop="url">PAT-A1001 A+B Format</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-02-18T09:36:27+08:00">
+                2020-02-18
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="A1001-A-B-Format（字符串处理）"><a href="#A1001-A-B-Format（字符串处理）" class="headerlink" title="A1001 A+B Format（字符串处理）"></a>A1001 A+B Format（字符串处理）</h2><h3 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h3><p>Calculate <em>a</em>+<em>b</em> and output the sum in standard format – that is, the digits must be separated into groups of three by commas (unless there are less than four digits).</p>
+<ul>
+<li>Input Specification: </li>
+</ul>
+<p>Each input file contains one test case. Each case contains a pair of integers <em>a</em> and <em>b</em> where −106≤<em>a</em>,<em>b</em>≤106. The numbers are separated by a space.</p>
+<ul>
+<li>Output Specification: </li>
+</ul>
+<p>For each test case, you should output the sum of <em>a</em> and <em>b</em> in one line. The sum must be written in the standard format.</p>
+<ul>
+<li>Sample Input:</li>
+</ul>
+<pre><code>-1000000 9</code></pre><ul>
+<li>Sample Output:</li>
+</ul>
+<pre><code>-999,991</code></pre><h3 id="思考"><a href="#思考" class="headerlink" title="思考"></a>思考</h3><p>将求和问题用字符串进行表示和处理是一种常规做法</p>
+<p>即用 to_String(int) 进行转换</p>
+<p>这一道题的关键在于 何时插入‘，’ 即从前往后输出 而又重后往前数数</p>
+<p>((i + 1) % 3 == len % 3 &amp;&amp; i != len - 1)</p>
+<p>用取余比对的方法来解决这个问题 即通过总长度得出余数 并且保证最后一位不会多输出</p>
+<h3 id="代码示例"><a href="#代码示例" class="headerlink" title="代码示例"></a>代码示例</h3><pre><code class="c++">#include &lt;iostream&gt;
+using namespace std;
+int main(){
+    int a,b;
+    cin &gt;&gt; a &gt;&gt; b;
+    string s = to_string(a + b);
+    int len = s.length();
+    for (int i = 0; i &lt; len; i++)
+    {
+        cout &lt;&lt; s[i];
+        if (s[i] == &#39;-&#39;) continue;
+        if ((i + 1) % 3 == len % 3 &amp;&amp; i != len - 1)
+        {
+            cout &lt;&lt; &quot;,&quot;;
+        }
+    }
+    return 0;
+}</code></pre>
+<p>(解题时参考了柳婼大大的代码 有兴趣可以去看一下  -&gt; <a href="https://www.liuchuo.net/" target="_blank" rel="noopener">柳婼のBlog</a>)</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/02/14/Markdown%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="看板喵 の Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/02/14/Markdown%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/" itemprop="url">Markdown使用指南</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-02-14T21:42:31+08:00">
+                2020-02-14
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="Markdown使用指南"><a href="#Markdown使用指南" class="headerlink" title="Markdown使用指南"></a>Markdown使用指南</h2><h3 id="α-对于文字的操作"><a href="#α-对于文字的操作" class="headerlink" title="α  对于文字的操作"></a>α  对于文字的操作</h3><p>** 中间的部分用粗体表示  如   <strong>我是一只喵</strong></p>
+<p>*  中间的部分表示为斜体 如  <em>本喵想吃小鱼干了</em></p>
+<p>~~ 中间的部分表示为删除线 如  <del>BUG改完了</del></p>
+<p>\ 后加这些特殊符号表示转义，即不产生效果只显示本身符号</p>
+<h3 id="β-对于段落的操作"><a href="#β-对于段落的操作" class="headerlink" title="β  对于段落的操作"></a>β  对于段落的操作</h3><p>1  几级标题就用几个#+标题文字 记得#与文字中间要加一个空格 如 </p>
+<h3 id="看板喵-の-Blog"><a href="#看板喵-の-Blog" class="headerlink" title="看板喵 の Blog"></a>看板喵 の Blog</h3><p>2  &gt; 后的一段会变为引用 如</p>
+<blockquote>
+<p>快起床！BUG要改不完了！</p>
+<p>喵！（炸毛）</p>
+</blockquote>
+<p>3  * 或+ 后的一段会加标识（本喵也不知道这叫什么，反正就这么个东西）</p>
+<p>可以按Tab键进行分级</p>
+<ul>
+<li>喵喵要出去玩~<ul>
+<li>喵喵回来了~</li>
+</ul>
+</li>
+<li>喵喵又要出去玩了~</li>
+</ul>
+<p>4  插入表格</p>
+<p>表格的基本格式</p>
+<blockquote>
+<p>| 喵喵爱吃的菜 | 喵喵不爱吃的零食 |</p>
+<p>| : ————- | : ————- |</p>
+<p>| 小鱼干 | 橘子 |</p>
+<p>| 虾虾  | 干果 |</p>
+</blockquote>
+<p>Command+T 可以插入表格 (Typora)</p>
+<p>5  分割线</p>
+<p>*** 显示分割线</p>
+<hr>
+<p>本喵不喜欢改BUG！</p>
+<hr>
+<h3 id="γ-插入其他元素"><a href="#γ-插入其他元素" class="headerlink" title="γ  插入其他元素"></a>γ  插入其他元素</h3><p>1  插入链接的形式为 [要带链接的文字](网址)  </p>
+<p><a href="https://missisolation.github.io/" target="_blank" rel="noopener">看板喵 の Blog</a></p>
+<p>2  插入图片的形式为 ![图片的名字](图片的地址)</p>
+<p><img src="/Users/apple/Documents/Blog/themes/fluid/source/img/cat.png" alt="cat"></p>
+<p>（Typora 直接把图片拖进来就可以）</p>
+<p>3  代码框 与数学公式编辑</p>
+<p>代码</p>
+<p>用  `    ` 将代码部分括起来，形成显示代码的区域</p>
+<pre><code class="c++">#include &lt;iostream&gt;
+using namespace std;
+
+int n, m, c1, c2;
+int e[510][510], weight[510], dis[510], num[510], w[510];
+bool visit[510];
+const int inf = 99999999;
+
+int main(){
+    scanf(&quot;%d%d%d%d&quot;, &amp;n, &amp;m, &amp;c1, &amp;c2);
+    for (int i = 0; i &lt; n; i++)
+    {
+        scanf(&quot;%d&quot;, &amp;weight[i]);
+    }    
+    fill(e[0], e[0] + 510 * 510, inf);
+    return 0;
+}</code></pre>
+<p>数学公式<br>$$<br>▽²ψ(x,y,z)+(8π²m/h²)[E-U(x,y,z)]ψ(x,y,z)＝0<br>$$</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/26/About-Me-%E6%97%A5%E5%B8%B8/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="看板喵 の Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/11/26/About-Me-%E6%97%A5%E5%B8%B8/" itemprop="url">About Me - 日常</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-11-26T16:09:56+08:00">
+                2019-11-26
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <blockquote>
+<p>The game has begun . . .</p>
+</blockquote>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+  </section>
+
+  
+
+
+          </div>
+          
+
+
+          
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">John Doe</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/%20%7C%7C%20archive">
+              
+                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                
+                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-name">tags</span>
+                
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">John Doe</span>
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
 
 
 
-  <script src="/lib/fancybox/jquery.fancybox.min.js" ></script>
-  <script>
-    $("#post img:not(.no-zoom img, img[no-zoom])").each(
-      function () {
-        var element = document.createElement("a");
-        $(element).attr("data-fancybox", "images");
-        $(element).attr("href", $(this).attr("src"));
-        $(this).wrap(element);
-      }
-    );
-  </script>
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
 
 
 
@@ -640,6 +1536,112 @@ The game has begun . . .
 
 
 
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
 
 </body>
 </html>
