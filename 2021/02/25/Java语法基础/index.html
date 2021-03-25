@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/color_cat.png">
+  <link rel="icon" type="image/png" href="/img/color_cat.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="description" content="">
+  <meta name="author" content="John Doe">
+  <meta name="keywords" content="">
+  <title>Java语法基础 ~ 看板喵 の Blog</title>
+
+  <link rel="stylesheet" href="/lib/font-awesome/css/all.min.css"  >
+<link rel="stylesheet" href="/lib/bootstrap/css/bootstrap.min.css"  >
+<link rel="stylesheet" href="/lib/mdbootstrap/css/mdb.min.css"  >
+<link rel="stylesheet" href="/lib/github-markdown/github-markdown.min.css"  >
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1067060_qzomjdt8bmp.css">
+
+
+  <link rel="stylesheet" href="/lib/prettify/tomorrow-night-eighties.min.css"  >
+
+<link rel="stylesheet" href="/css/main.css"  >
+
+
+  <link rel="stylesheet" href="/lib/fancybox/jquery.fancybox.min.css"  >
+
+
+</head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>看板喵不会改BUG</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/">首页</a>
+          </li>
+        
+          
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/archives/">归档</a>
+          </li>
+        
+          
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/categories/">分类</a>
+          </li>
+        
+          
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/tags/">标签</a>
+          </li>
+        
+          
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/about/">关于</a>
+          </li>
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="view intro-2" id="background" false
+         style="background: url('/img/shufang.jpg')no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask rgba-black-light flex-center">
+          <div class="container text-center white-text fadeInUp">
+            <span class="h2" id="subtitle">
+              
+            </span>
+
+            
+              <br>
+              
+                <p class="mt-3">
+                  <i class="fas fa-calendar-alt" aria-hidden="true"></i>&nbsp;
+                  星期四, 二月 25日 2021, 4:02 下午
+                </p>
+              
+
+              <p>
+                
+                  
+                  &nbsp;<i class="far fa-chart-bar"></i>
+                  <span class="post-count">
+                    2.6k 字
+                  </span>&nbsp;
+                
+
+                
+                  
+                  &nbsp;<i class="far fa-clock"></i>
+                  <span class="post-count">
+                      9 分钟
+                  </span>&nbsp;
+                
+
+                
+                  <!-- 不蒜子统计文章PV -->
+                  
+                  &nbsp;<i class="far fa-eye" aria-hidden="true"></i>&nbsp;
+                  <span id="busuanzi_container_page_pv">
+                    <span id="busuanzi_value_page_pv"></span> 次
+                  </span>&nbsp;
+                
+              </p>
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-md">
+      <div class="py-5 z-depth-3" id="board">
+        <div class="post-content mx-auto" id="post">
+          <div class="markdown-body">
+            <h3 id="Java语法基础笔记"><a href="#Java语法基础笔记" class="headerlink" title="Java语法基础笔记"></a>Java语法基础笔记</h3><p><strong>1 编译与执行</strong></p>
+<p>java源代码（.java）&lt;（java编译器编译）&gt; </p>
+<p>java字节码（.class）+  库代码  &lt;JVM执行（Java解释器）&gt;</p>
+<p> <strong>2 从控制台输入输出</strong></p>
+<p>System.out（in）表示标准输入输出设备</p>
+<p>使用Scanner类创建对象进行读取</p>
+<p>Scanner input = new Scanner(System.in); //将System.in引用值赋给input</p>
+<p>然后通过调用Scanner的方法获取input的值</p>
+<p>double a = input.nextDouble();//读取时以空格或者回车键为分隔</p>
+<p><strong>3 命名常量</strong>（大写所有字母）（用final修饰符）（这是方法中局部变量的常量）</p>
+<p>final int PI = 3.14;</p>
+<p><strong>4 Java8种基本数据类型</strong></p>
+<p>带符号整数（符号占一位）：byte 8  short 16  int 32 long 64</p>
+<p>IEEE754标准浮点数：float 32  double 64（复习下IEEE754）</p>
+<p>boolean  1位  true 或 false  都是直接量 保留字</p>
+<p>char 16位 存储Unicode码</p>
+<p>（其实还有void 但不可以直接操作）</p>
+<p><strong>5 算术操作符 &amp; 关系操作符</strong></p>
+<p>五种算术操作符 “ + - * / % ”    Math.pow(a,b) 幂运算</p>
+<p>六种关系操作符</p>
+<p>四种逻辑操作符   ! 非   &amp;&amp; 与   || 或   ^异或（等同p1 != p2）</p>
+<p>操作符优先级：</p>
+<p>一定先计算括号里面的运算！！！（尤其是涉及到和字符串一起操作的时候）</p>
+<p>同一级别的自左到右结合进行计算</p>
+<p>其他的看一下优先级表（赋值最低  ! 在运算前  其他逻辑和关系都在运算后）</p>
+<p>5.0/9 和 5/9结果不同！</p>
+<p>增强赋值操作符 +=  在表达式中所有其他操作符计算完成后执行  既是赋值语句也是赋值表达式</p>
+<p>use（x += 9+9*7）</p>
+<p>自增自减 ++ – </p>
+<p>j = 10 * i++ 先计算后++  </p>
+<p>j = 10 * (++i) 先++后计算</p>
+<p>三元运算符（唯一）</p>
+<p>x = 布尔表达式 ？表达式1 : 表达式2 （为真执行1 为假执行2）</p>
+<p><strong>6 数值直接量</strong></p>
+<p>超过int范围的直接量后面要加“L”（表示是long类型）</p>
+<p>表示一个二进制直接量使用“0B”开头，八进制直接用0，十六进制用“0X”</p>
+<p>0B1111  07777  0XFFFF</p>
+<p>带小数点的数值默认是double类型的，后面加上f或F才表示是float类型的</p>
+<p>科学计数法  123.456  1.23456E2（或E+2）（表示10的2次方）0.0123  1.23E-2</p>
+<p>数值之间可以用下划线隔开  231_453_234L</p>
+<p><strong>7 类型转换</strong></p>
+<p>小范围变大范围（拓宽类型）  Java会自动拓宽</p>
+<p>大范围变小范围（缩窄类型）必须显式完成</p>
+<p>记住！浮点数的范围比整数大得多，虽然float只有32位，但是比64位的long表示范围大（3.4E38  double是1.7E308 而long只有0.9E19 int 0.2E10），long型可以直接赋给float</p>
+<p>显示转换   (int)1.7   -&gt; 1    (double) 1/2   -&gt; 0.5</p>
+<p>注意！x1 op= x2 的形式自带显式转换，运算完会转换成x1的类型</p>
+<p><strong>8 溢出问题</strong></p>
+<p>java中如果变量被赋予一个过大的值，就会溢出，但是Java不会给出警告或报错！只是你的值会变得不正确。</p>
+<p>对于整数，如byte -128到127  127+1 -&gt; -128  -128-1 -&gt; 127（原码理解就可以）。对于浮点数，很接近0会向下溢出，Java会将其近似为0</p>
+<p><strong>9 取整错误</strong></p>
+<p>涉及浮点数的的计算都是近似的，所以在==时可能会遇到问题，要注意一下</p>
+<p>还有double s = （2 + 3）/ 2 执行的是整数除法  只有（2+3）/ 2.0 才是对的</p>
+<p>10  if  switch</p>
+<p>switch(表达式){</p>
+<p>case 0 : XXX;</p>
+<p>break;</p>
+<p>…………</p>
+<p>default : XXX;</p>
+<p>}</p>
+<p><strong>11 常用的数学函数和random方法</strong></p>
+<p>Math.方法(数值)</p>
+<p>Math.random() 返回一个0.0-1.0之间的double（不包括1.0）（只有一位小数？）</p>
+<p>返回一个区间的随机整数  a + （int）(Math.random() * b)  (a到a+b这个区间的一个随机整数，不包括a+b)</p>
+<p><strong>12  char类型</strong></p>
+<p>char有16位，可以存放一个Unicode码</p>
+<p>Java支持Unicode</p>
+<p>Unicode码  16位  用 /u开头的4位16进制表示  从/u0000到/uFFFF对应128个ASCII码</p>
+<p>ASCII码  8位（只用7位来表示）常用  0-9  48-57  A-Z  65-90  a-z  97-122（数值对应）</p>
+<p>char可以自增自减</p>
+<p>转义字符 \    \n换行  \r 回车  \\   \“</p>
+<p>char与任意数值类型可以相互转换（要显式转换）。</p>
+<p>浮点数会先转换成int，整数类型会截取低16位进行存储</p>
+<p>char转数值，会转成对应特定数值</p>
+<p>0-FFFF任意一个正整数都可以隐式转成char，其他的必须显式声明</p>
+<p>所有数值操作符都可以用在char上，char会自动变成数字，如果是字符串，就会将这个char连上去（数值也可以直接和string相连，j=99  j+”abb”  -&gt; 99abb）</p>
+<p>char也可以直接用关系操作符比较</p>
+<p>Character类提供了一些字符处理方法</p>
+<p><strong>13 String类型</strong></p>
+<p>java库中预定义的类，不是基本类型而是引用类型</p>
+<p>实例方法   静态方法</p>
+<p>“”表示空字符串，其length为0</p>
+<p>Scanner的next()方法读取以空白字符结束的字符串</p>
+<p><strong>14 基本字符串函数（可以看看源码实现）</strong></p>
+<p>charAt(index) 提取特定字符，0到size-1   注意不要越界</p>
+<p>substring(beginIndex,endIndex)  截取字符子串，可以没有endIndex</p>
+<p>获取字符或子串的下标的方法 （last加了这个前缀就是从后向前找，不加就是从想象后）indexOf(ch/s1,FromIndex(可以没有))</p>
+<p>trim()用于删除两端空白字符（包括一些转义字符）</p>
+<p>直接使用 + 进行字符串连接 +=也支持</p>
+<p>字符串和数字或者char连接都是直接连接，注意也是左结合的，有括号先算括号</p>
+<p>== 与equals的区别，涉及到堆栈的问题</p>
+<p>不能使用  &gt;  &lt; 来比较字符串 用compareTo(s2) 来代替 （equals返回true false 而这个是逐个字符比较，返回 正数 0 或者负数）</p>
+<p>contains(s2)判断是否是子串</p>
+<p>可以用XXIgnoreCase(s2) 来忽略大小写</p>
+<p>starts/endsWith(s2)</p>
+<p>字符串可以与数字间相互转化</p>
+<p>int  num = Integer.parseInt(“123456”);（num就是123456） （double的字符串数值也可以用Double.parseDouble(“123456”)来实现）</p>
+<p>数值转字符串直接   String s1 =  数值+””;  即可</p>
+<p><strong>15 循环 while  do-while for</strong>  </p>
+<p>foreach  用于遍历数组   for（元素类型  e : 数组变量）顺序遍历数组中每一个元素</p>
+<p><strong>16 输入 输出重定向</strong></p>
+<p><strong>17 方法 包括方法头和方法体</strong></p>
+<p>方法头包括  修饰符（public protected private ； static  可以都有）  返回值类型  方法名  参数列表</p>
+<p>方法体  处理逻辑  返回值</p>
+<p>形参  实参（调用时）</p>
+<p>main方法由Java虚拟机调用</p>
+<p>调用方法时会创建一个活动记录（活动框架），用于保存方法中的参数和变量。活动记录位于一个内存区域，称为<strong>（调用、执行、运行时）堆栈（call stack）</strong>，当一个方法调用另一个方法，调用者的活动记录保持不动，一个新的活动记录被创建于被调用的新方法（<strong>本质是一个stack，一个方法调用给一块空间，先进后出</strong>）</p>
+<p>当调用放回时，空间被释放（这一块要去看一下JVM，看一下底层是怎样实现的）</p>
+<p><strong>Java只有一种传参方式  按值传递（pass by value），当方法调用时将实参的值传给形参，形参的变量是独立的，不影响实参本身（引用变量不是）（这个要结合引用和复制）</strong></p>
+<p><strong>18 方法重载</strong>   有相同的方法签名  但有不同的参数列表（但要注意不要歧义调用）</p>
+<p><strong>19 方法抽象</strong>（将使用和实现分离）和逐步求精（分治思想）</p>
+<p>自顶向下设计  -&gt; 自顶向下和自底向上的实现</p>
+<p><strong>20 数组</strong></p>
+<p>元素类型 [] 变量名 = new 元素类型[数组大小];</p>
+<p>（1 使用new 创建了一个数组并分配内存空间  2 将这个数组引用赋给变量）</p>
+<p>数组变量存储了指向数组的引用（内存地址）</p>
+<p>所有数组元素都有默认值，0  \u0000  false</p>
+<p>匿名数组（在方法调用实参直接new数组   new []{   }  ）</p>
+<p>数组的复制（）  数组的传递（传递的是引用）</p>
+<p><strong>JVM将对象存储在  堆（heap）中，堆用于动态内存分配</strong></p>
+<p>在程序运行时，会将数组创建于堆中，而方法被调用时，变量会存在栈中</p>
+<p>方法返回的数组实际上是传的是数组的引用</p>
+<p><strong>可变长参数列表</strong>  方法名(XXX,变量类型…变量名)  必须是最后一个变量，代表是可变长参数，Java将其看做数组处理  调用的时候可以<strong>传入一个不定长的参数头</strong>，或者直接传一个数组  （  pixi（XXX, 34,4,5,5.5）或者  pixi（XXX,new []{}））</p>
+<p>Arrays类是util工具类中对数组的一些方法  尤其是sort和parallelSort（要看下JDK的实现源码）</p>
+<p>toString(s1)  返回一个字符串，包含数组所有内容</p>
+<p>equals(s1,s2)检测两个数组内容是否相同</p>
+<p><strong>main方法实际上就是一个静态的、参数是字符串数组的普通方法。main方法可以被其他类的方法调用（因为是 public  static void 的）当调用main的时候，Java解释器会new一个数组存储  命令行参数  没有参数会创建一个length为0的数组，而不是null！</strong></p>
+<p><strong>问题：匿名数组和数组直接量有什么区别？尤其是在方法传参的时候（会不会Java解释器自己创建一个数组来存储命令行参数，然后再传给方法？）</strong></p>
+<p><strong>21 多维数组</strong></p>
+<p>元素类型 [] [] 数组名  =  new  元素类型 [行数量] [列数量]</p>
+<p>初始化  = { {……} {……} {……} } ;（一行一行的）</p>
+<p>x[0]  x[1]  x[2] 都是一个一维数组的引用  一个框是引用  两个框是地址</p>
+<p><strong>锯齿数组  各行长度不同的数组，可以new行数，这样就给定了第一维的地址空间，然后再分别new每一行的数组的长度（实际上和邻接表很像，只是第一维的数组的元素不是链表，而是顺序表） int [][] array = new int[行数][]   然后每一行 array[0] = new int[每一行的个数]</strong></p>
+<p>传递二维数组，返回二维数组的引用  int [] [] array </p>
+
+            <hr>
+          </div>
+          <br>
+          <div>
+            <p>
+            
+            
+              <span>
+                <i class="iconfont icon-tag"></i>
+                
+                  <a class="hover-with-bg" href="/tags/Java%E5%9F%BA%E7%A1%80">Java基础</a>
+                
+              </span>
+            
+            </p>
+            
+              <p class="note note-warning">本博客所有文章除特别声明外，均采用 <a href="https://zh.wikipedia.org/wiki/Wikipedia:CC_BY-SA_3.0%E5%8D%8F%E8%AE%AE%E6%96%87%E6%9C%AC" target="_blank" rel="nofollow noopener noopener">CC BY-SA 3.0协议</a> 。转载请注明出处！</p>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="d-none d-lg-block col-lg-2 toc-container">
+      
+  <div id="toc">
+    <p class="h4"><i class="far fa-list-alt"></i>&nbsp;目录</p>
+    <div id="tocbot"></div>
+  </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- custom -->
+
+
+<!-- Comments -->
+<div class="col-lg-7 mx-auto nopadding-md">
+  <div class="container comments mx-auto" id="comments">
+    
+  </div>
+</div>
+
+    
+  </main>
+
+  
+    <a class="z-depth-1" id="scroll-top-button" href="#" role="button">
+      <i class="fa fa-chevron-up scroll-top-arrow" aria-hidden="true"></i>
+    </a>
+  
+
+  
+    <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+  
+
+  <footer class="mt-5">
+  <div class="text-center py-3">
+    <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><b>Hexo</b></a>
+    <i class="iconfont icon-love"></i>
+    <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"> <b>Fluid</b></a>
+    <br>
+
+    
+  
+    <!-- 不蒜子统计PV -->
+    
+    &nbsp;<span id="busuanzi_container_site_pv"></span>总访问量 
+          <span id="busuanzi_value_site_pv"></span> 次&nbsp;
+  
+  
+    <!-- 不蒜子统计UV -->
+    
+    &nbsp;<span id="busuanzi_container_site_uv"></span>总访客数 
+            <span id="busuanzi_value_site_uv"></span> 人&nbsp;
+  
+  <br>
+
+
+
+    
+
+
+    <!-- cnzz Analytics icon -->
+    
+
+  </div>
+</footer>
+
+<!-- SCRIPTS -->
+<script src="/lib/jquery/jquery.min.js" ></script>
+<script src="/lib/popper/popper.min.js" ></script>
+<script src="/lib/bootstrap/js/bootstrap.min.js" ></script>
+<script src="/lib/mdbootstrap/js/mdb.min.js" ></script>
+<script src="/js/main.js" ></script>
+
+
+  <script src="/js/lazyload.js" ></script>
+
+
+
+  
+    <script src="/lib/tocbot/tocbot.min.js" ></script>
+  
+  <script src="/js/post.js" ></script>
+
+
+
+  <script src="/lib/smoothscroll/SmoothScroll.min.js" ></script>
+
+
+
+  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+<!-- Plugins -->
+
+
+  
+
+  
+
+  
+
+  
+
+  <!-- cnzz Analytics -->
+  
+
+
+
+  <script src="/lib/prettify/prettify.min.js" ></script>
+  <script>
+    $(document).ready(function () {
+      $('pre').addClass('prettyprint  linenums');
+      prettyPrint();
+    })
+  </script>
+
+
+
+  <script src="/lib/typed/typed.min.js" ></script>
+  <script>
+    var typed = new Typed('#subtitle', {
+      strings: [
+        '  ',
+        "Java语法基础&nbsp;",
+      ],
+      cursorChar: "_",
+      typeSpeed: 70,
+      loop: false,
+    });
+    typed.stop();
+    $(document).ready(function () {
+      $(".typed-cursor").addClass("h2");
+      typed.start();
+    });
+  </script>
+
+
+
+  <script src="/lib/anchor/anchor.min.js" ></script>
+  <script>
+    anchors.options = {
+      placement: "right",
+      visible: "false",
+      
+    };
+    var el = "h1,h2,h3,h4,h5,h6".split(",");
+    var res = [];
+    for (item of el) {
+      res.push(".markdown-body > " + item)
+    }
+    anchors.add(res.join(", "))
+  </script>
+
+
+
+  <script src="/js/local-search.js" ></script>
+  <script>
+    var path = "/local-search.xml";
+    var inputArea = document.querySelector("#local-search-input");
+    inputArea.onclick = function () {
+      getSearchFile(path);
+      this.onclick = null
+    }
+  </script>
+
+
+
+  <script src="/lib/fancybox/jquery.fancybox.min.js" ></script>
+  <script>
+    $("#post img:not(.no-zoom img, img[no-zoom])").each(
+      function () {
+        var element = document.createElement("a");
+        $(element).attr("data-fancybox", "images");
+        $(element).attr("href", $(this).attr("src"));
+        $(this).wrap(element);
+      }
+    );
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

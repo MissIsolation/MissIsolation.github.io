@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/color_cat.png">
+  <link rel="icon" type="image/png" href="/img/color_cat.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="description" content="">
+  <meta name="author" content="John Doe">
+  <meta name="keywords" content="">
+  <title>Java其他特性 ~ 看板喵 の Blog</title>
+
+  <link rel="stylesheet" href="/lib/font-awesome/css/all.min.css"  >
+<link rel="stylesheet" href="/lib/bootstrap/css/bootstrap.min.css"  >
+<link rel="stylesheet" href="/lib/mdbootstrap/css/mdb.min.css"  >
+<link rel="stylesheet" href="/lib/github-markdown/github-markdown.min.css"  >
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1067060_qzomjdt8bmp.css">
+
+
+  <link rel="stylesheet" href="/lib/prettify/tomorrow-night-eighties.min.css"  >
+
+<link rel="stylesheet" href="/css/main.css"  >
+
+
+  <link rel="stylesheet" href="/lib/fancybox/jquery.fancybox.min.css"  >
+
+
+</head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>看板喵不会改BUG</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/">首页</a>
+          </li>
+        
+          
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/archives/">归档</a>
+          </li>
+        
+          
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/categories/">分类</a>
+          </li>
+        
+          
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/tags/">标签</a>
+          </li>
+        
+          
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/about/">关于</a>
+          </li>
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="view intro-2" id="background" false
+         style="background: url('/img/shufang.jpg')no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask rgba-black-light flex-center">
+          <div class="container text-center white-text fadeInUp">
+            <span class="h2" id="subtitle">
+              
+            </span>
+
+            
+              <br>
+              
+                <p class="mt-3">
+                  <i class="fas fa-calendar-alt" aria-hidden="true"></i>&nbsp;
+                  星期二, 三月 2日 2021, 7:14 晚上
+                </p>
+              
+
+              <p>
+                
+                  
+                  &nbsp;<i class="far fa-chart-bar"></i>
+                  <span class="post-count">
+                    7.6k 字
+                  </span>&nbsp;
+                
+
+                
+                  
+                  &nbsp;<i class="far fa-clock"></i>
+                  <span class="post-count">
+                      27 分钟
+                  </span>&nbsp;
+                
+
+                
+                  <!-- 不蒜子统计文章PV -->
+                  
+                  &nbsp;<i class="far fa-eye" aria-hidden="true"></i>&nbsp;
+                  <span id="busuanzi_container_page_pv">
+                    <span id="busuanzi_value_page_pv"></span> 次
+                  </span>&nbsp;
+                
+              </p>
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-md">
+      <div class="py-5 z-depth-3" id="board">
+        <div class="post-content mx-auto" id="post">
+          <div class="markdown-body">
+            <h3 id="Java其它特性"><a href="#Java其它特性" class="headerlink" title="Java其它特性"></a>Java其它特性</h3><hr>
+<h3 id="1-关于JDK、JRE、JVM和Java编译器及Java解释器"><a href="#1-关于JDK、JRE、JVM和Java编译器及Java解释器" class="headerlink" title="1 关于JDK、JRE、JVM和Java编译器及Java解释器"></a>1 关于JDK、JRE、JVM和Java编译器及Java解释器</h3><p>JDK是Java的开发工具包（SDK），提供了开发环境（编译器javac等工具，用于将java文件编译为class文件）以及运行环境JRE（JVM和Runtime辅助包，用于解析class文件使其得到运行）</p>
+<p>JRE是Java运行环境，包含JVM和核心类库（的class文件）与支持文件（只要装了JRE就可以运行Java文件）</p>
+<p>JVM：一种能够运行Java字节码（Java bytecode）的虚拟机。</p>
+<p>字节码：字节码是已经经过编译，但与特定机器码无关，需要解释器转译后才能成为机器码的中间代码。</p>
+<p>JVM：JVM有自己完善的硬件架构，如处理器、堆栈（Stack）、寄存器等，还具有相应的指令系统（字节码就是一种指令格式）。JVM屏蔽了与具体操作系统平台相关的信息，使得Java程序只需要生成在Java虚拟机上运行的目标代码（字节码），就可以在多种平台上不加修改地运行。JVM是Java平台无关的基础。<strong>JVM负责运行字节码：JVM把每一条要执行的字节码交给解释器，翻译成对应的机器码，然后由解释器执行</strong>。JVM解释执行字节码文件就是<strong>JVM操作Java解释器进行解释执行字节码文件的过程</strong>。</p>
+<p>Java编译器：将Java源文件（.java文件）编译成字节码文件（.class文件，是特殊的二进制文件，二进制字节码文件），这种字节码就是JVM的“机器语言”。javac.exe可以简单看成是Java编译器。</p>
+<p>Java解释器：是JVM的一部分。Java解释器用来解释执行Java编译器编译后的程序。java.exe可以简单看成是Java解释器。</p>
+<p>即时编译(Just-in-time compilation: JIT)：又叫实时编译、及时编译。是指一种在运行时期把字节码编译成原生机器码的技术，一句一句翻译源代码，但是会将翻译过的代码缓存起来以降低性能耗损。这项技术是被用来改善虚拟机的性能的。</p>
+<p>JIT编译器是JRE的一部分。原本的Java程序都是要经过解释执行的，其执行速度肯定比可执行的二进制字节码程序慢。为了提高执行速度，引入了JIT。在运行时，JIT会把翻译过来的机器码保存起来，以备下次使用。而如果JIT对每条字节码都进行编译，则会负担过重，所以，JIT只会对经常执行的字节码进行编译，如循环，高频度使用的方法等。它会以整个方法为单位，一次性将整个方法的字节码编译为本地机器码，然后直接运行编译后的机器码。</p>
+<h3 id="2-异常"><a href="#2-异常" class="headerlink" title="2 异常"></a>2 异常</h3><p><strong>异常处理可以使得程序处理费预期场景，并且继续正常的处理</strong></p>
+<p>在程序运行时，JVM如果检测出一个不可能执行的操作，就会出现<strong>运行时错误</strong>。Java中<strong>运行时错误会作为异常抛出</strong>。</p>
+<p><strong>异常就是一种对象，表示阻止正常进行程序执行的错误或情况。如果异常没有被处理，那么程序会非正常终止。</strong></p>
+<p><strong>异常是方法抛出的，方法的调用者可以捕获以及处理该异常，Java可以让一个方法抛出一个异常，该异常可以被调用者捕获和处理</strong></p>
+<p><strong>如果某个方法不能按照正常的途径完成任务，就可以通过另一种路径退出方法。在这种情况下会抛出一个封装了错误信息的对象。此时，这个方法会立刻退出同时不返回任何值。另外，调用这个方法的其他代码也无法继续执行，异常处理机制会将代码执行交给异常处理器。</strong></p>
+<p><strong>异常分类</strong></p>
+<p><strong>Throwable</strong> 是 Java 语言中所有错误或异常的超类。<strong>下一层分为 Error 和 Exception</strong></p>
+<p><strong>Error（错误）</strong></p>
+<p>Error 类是指Java运行时系统的内部错误和资源耗尽错误。<strong>是由JVM抛出的，应用程序不会抛出该类对象</strong>。如果出现了这样的错误，除了告知用户，剩下的就是尽力使程序安全的终止。</p>
+<p><strong>Exception</strong>(RuntimeException、CheckedException) </p>
+<p><strong>RuntimeException（运行时异常）</strong></p>
+<p> 如 : NullPointerException 、ClassCastException ; RuntimeException。是那些<strong>可能在 Java 虚拟机正常运行期间抛出的异常的超类</strong>。 描述的是程序设计的错误。</p>
+<p><strong>CheckedException（必检异常）</strong></p>
+<p><strong>Error和RuntimeException统称为免检异常。Exception下的其他的都是必检异常（和 RuntimeExceptio同级）</strong>如 I/O错误导致的 IOException、QLException。 </p>
+<p>必检的意思是编译器会强制程序员检查，并通过try-catch块来进行处理，或者在方法头进行声明；而免检异常一般都是设计上的逻辑错误，Java不要求捕获声明免检异常</p>
+<p><strong>CheckedException</strong>一般是外部错误，<strong>这种异常都发生在编译阶段</strong>，Java 编译器会强制程序去捕获此类异常，即会出现要求你把这段可能出现异常的程序进行 try catch，该类异常一般包括几个方面:</p>
+<ol>
+<li><p>试图在文件尾部读取数据</p>
+</li>
+<li><p>试图打开一个错误格式的 URL</p>
+</li>
+<li><p>试图根据给定的字符串查找 class 对象，而这个字符串表示的类并不存在</p>
+</li>
+</ol>
+<p><strong>Java的异常处理模型基于三种操作：声明一个异常、抛出一个异常、捕获一个异常</strong></p>
+<p><strong>（1）声明异常（方法头）</strong></p>
+<p>每个方法都要声明它可能抛出的必检异常的类型</p>
+<p>在方法头中使用关键字 <code>thows</code>表明要抛出的异常种类（可以多个）</p>
+<pre><code class="java">public void method() throws Exception1,Exception2，...</code></pre>
+<p><strong>(2) 抛出异常（方法体）</strong></p>
+<p>检测到异常的程序可以创建一个合适的异常类型的实例并抛出它，要在方法体中使用<code>thow</code>对可能有异常的地方进行判断和抛出</p>
+<pre><code class="java">thow new IllegalArgumentException(&quot;错误信息的描述字符串&quot;);//隐式创建异常的实例</code></pre>
+<p><strong>一般来说，异常类有两个构造方法，一个是无参的，一个是可带描述信息的，该参数称为异常消息，可以通过<code>getMessage()</code>来获取异常的异常消息</strong></p>
+<p><strong>（3）捕获异常（方法调用时（可以是一个方法的定义中调用了另一个方法））</strong></p>
+<p>使用<code>try-catch</code>块来捕获和处理异常，<code>finally</code>子句用来放置必然要执行的语句</p>
+<pre><code class="java">try{
+   statements
+}catch(Exception1 ex1){
+   handdler for ex1
+}catch(Exception2 ex2){
+   handdler for ex2
+}
+  ···
+finally{
+  ···
+}</code></pre>
+<p><strong>如果在执行try块的过程中没有出现异常，则跳过catch子句</strong></p>
+<p>*<em>如果try块中的某条语句抛出一个异常，Java就会跳过剩余语句，然后开始查找处理这个异常的catch块，之后执行try-catch后的语句。处理这个异常的代码称作  异常处理器  *</em></p>
+<p><strong>当某个调用的方法抛出一个异常，从当前的方法开始，沿着方法调用链，按照异常的反向传播方向去寻找这个异常的处理器（某个catch块），如果异常没有在当前方法被捕获，就被传给该方法的调用者，这个过程一直重复（不断向上寻找），直到异常被捕获或者被传给main方法（如果最终没有捕获就会终止程序）</strong></p>
+<p><strong>任何情况情况下，finally中的代码都会执行（即便之前有return也会执行，finally是在本层的最后执行的）</strong></p>
+<p>从一个通用父类可以派生出各种异常类，<strong>如果一个catch块可以捕获一个父类的异常对象，它就可以捕获那个父类的所有子类的异常对象</strong></p>
+<p><strong>如果方法声明了一个必检异常（在方法头），那调用它的时候就必须加上<code>try-catch</code>块（在调用者这一层进行处理），或者在调用者的方法上声明同类异常（不在这一层处理，继续向上传导该异常）</strong></p>
+<pre><code class="java">void p1(){//在调用者这一层进行处理
+  try{
+    p2();
+  }
+  catch (IOException ex){
+  ···
+  }
+}
+
+void p1() throws IOException{//不在这一层处理，继续向上传导该异常
+  p2();
+}</code></pre>
+<p><strong>对于捕获多个异常使用同样代码处理，可以用JDK7的 多捕获特征  来写（使用 <code>|</code>来分隔多个异常）</strong></p>
+<pre><code class="java">catch (Exception1 | Exception2 | ··· | Exceptionk ex){
+  ···
+}</code></pre>
+<p><strong>从异常中获取信息</strong></p>
+<p>使用Throwable类中的方法</p>
+<p><code>getMessage()</code>获取描述该异常的信息</p>
+<p><code>toString()</code>返回三个字符串连接    异常类名 ：<code>getMessage()</code></p>
+<p><code>printStackTrace()</code> 打印<code>toString()</code>+<code>getStackTrace</code> </p>
+<p><code>getStackTrace()</code> 返回该异常堆对象相关堆栈信息</p>
+<p><strong>注意！使用异常需要  1 新建异常对象  2 从调用栈返回  3 沿方法调用链来传播异常以便找到异常处理器  这意味着花更长的时间和资源，所以要谨慎使用异常</strong></p>
+<p><strong>重新抛出异常：如果在这一层处理不了这个异常，允许在catch中重新<code>thow</code>已经捕获异常，以便给本层后面的catch块或者上一层调用来处理</strong></p>
+<p><strong>链式异常：同原始异常一起抛出一个新异常 比如<code>thow new Exception(&quot;新异常的信息&quot;, 上一层原始异常ex)</code></strong></p>
+<p><strong>创建自定义异常：可以通过派生 Exception类来定义一个自定义异常类</strong></p>
+<p><strong>文本I/O：File类 绝对/相对路径 I/O方法（Scanner PrintWriter 类）try-with-resources自动关闭资源</strong></p>
+<p><strong>Scanner</strong>&amp;<strong>PrintWriter</strong>：</p>
+<pre><code></code></pre><h3 id="3-Java反射"><a href="#3-Java反射" class="headerlink" title="3 Java反射"></a>3 Java反射</h3><p><strong>（1）反射概述</strong></p>
+<p><strong>动态语言，是指程序在运行时可以改变其结构:新的函数可以引进，已有的函数可以被删除等结构上的变化。</strong>比如常见的 JavaScript 就是动态语言，除此之外 Ruby,Python 等也属于动态语言，而 C、C++则不属于动态语言。<strong>从反射角度说 JAVA 属于半动态语言。</strong></p>
+<p><strong>在 Java 中的反射机制是指在运行状态中，对于任意一个类都能够知道这个类所有的属性和方法;并且对于任意一个对象，都能够调用它的任意一个方法</strong>;这种动态获取信息以及动态调用对象方法的功能称为 Java 语言的反射机制。</p>
+<p>反射机制可以用来:</p>
+<p><strong>1 在运行时分析类的能力 。</strong></p>
+<p><strong>2 在运行时查看对象。例如，编写一个 toString 方法供所有类使用。</strong></p>
+<p><strong>3 实现通用的数组操作代码。</strong></p>
+<p><strong>4 利用 Method 对象， 这个对象很像c++中的函数指针。</strong></p>
+<p><strong>（2）Java反射API</strong></p>
+<p><strong>反射 API 用来生成 JVM 中的类、接口或则对象的信息。</strong></p>
+<p><strong>1. Class 类</strong>:反射的核心类，可以获取类的属性，方法等信息。（Java.lang.Class）</p>
+<p>（以下都是Java.lang.reflec 包中的类）</p>
+<p><strong>2. Field 类 （域）</strong>:表示类的成员变量，可以用来获取和设置类之中的属性值。</p>
+<p><strong>3. Method 类 （方法）</strong>: 表示类的方法，它可以用来获取类中的方法信息或者执行方法。</p>
+<p><strong>4. Constructor 类 （构造器）</strong>: 表示类的构造方法。</p>
+<p><strong>（3）反射使用步骤</strong></p>
+<ol>
+<li><p>获取想要操作的类的 Class 对象（<strong>3种方法</strong>），通过 Class 对象我们可以任意调用类的方法。</p>
+</li>
+<li><p>调用 Class 类中的方法（获取反射API对象），这是反射的使用阶段。</p>
+</li>
+<li><p>使用反射 API（<strong>Field Method Constructor的方法</strong>）来操作这些信息。</p>
+</li>
+</ol>
+<p><strong>（4）Class类的使用</strong></p>
+<p>在程序运行期间， Java 运行时系统始终<strong>为所有的对象</strong>维护一个被称为<strong>运行时的类型标识</strong>。 这个信息跟踪着每个对象所属的类。 虚拟机利用运行时类型信息选择相应的方法执行。<strong>保存这些信息的类被称为Class</strong>。 <strong>Object 类中的 getClass( ) 方法将会返回一个 Class 类型的实例</strong>。</p>
+<p>一个 Class 对象将表示一个特定类的属性。</p>
+<p><strong>（4.1）  获取Class对象</strong></p>
+<pre><code class="java">E e = new E();
+String s = e.getClass().getName();//得到某个实例对应类的类名
+
+//获得Class类的3种方法
+Class cl = e.getClass();//通过调用类的实例的getClass()方法获取
+Class cl = E.class;//通过调用类的class属性来获取
+Class cl = Class.forName(&quot;类的全路径（包名+类名）&quot;);//（最安全|性能最好）这是个静态方法，可以根据类名来得到对应的类的Class类的实例。注意！无论何时使用这个方法，都应该提供一个异常处理器</code></pre>
+<p>注意！一个 Class 对象实际上表示的是一个类型， 而这个类型未必一定是一种类。 例如， int 不是类， 但 int.class 是一个 Class 类型的对象。</p>
+<p><strong>Class类实际上是一个泛型类</strong>。例如，Employee.class的类型是<code>Class&lt;Employee&gt;</code>。但其实在大多数实际问题 中， 可以忽略类型参数， 而使用原始的Class 类</p>
+<p>注意！鉴于历史原 <strong>getName 方法在应用于数组类型的时候会返回一个很奇怪的名字</strong>: <strong>Double[]class.getName()返回“ [Ljava.lang.Double;’’<br> int[].class.getName()返回“ [I”，</strong></p>
+<p><strong>虚拟机为每个类型管理一个 Class 对象。（所以对于同一个类来说，其Class实例时唯一的，所有引用都指向一个地方） 因此， 可以利用 = 运算符实现两个类对象比较 的操作。</strong></p>
+<p>可以让启动变快的方法：首先， 显示一个启动画面; 然后，通过调用 Class.forName 手工地加载其他的类。（避免调用main方法加载所有的类花费大量时间）</p>
+<p><strong>（4.2）通过Class类型创建对应类的实例的两种方法</strong></p>
+<p>1.<strong>Class</strong> 对象的 <strong>newInstance()</strong></p>
+<p>使用 Class 对象的 newInstance()方法来创建该 Class 对象对应类的实例，但是这种方法要求该 Class 对象<strong>对应的类有默认的空构造器</strong>。（首先获得该类的Class对象，然后创建实例）</p>
+<p>比如将 forName 与 newlnstance 配合起来使用， 可以根据存储在字符串中的类名创建一个对象</p>
+<pre><code class="java">e.getClass().newlnstance();
+
+String s = &quot;java.util.Random&quot;;
+Object m = Class.forName(s).newlnstance();//注意使用时要类型转换</code></pre>
+<p>2.调用 <strong>Constructor</strong> 对象的 <strong>newInstance()</strong> </p>
+<p>先使用 Class 对象获取指定的 Constructor 对象，再调用 Constructor 对象的 newInstance()方法来创建 Class 对象对应类的实例,<strong>通过这种方法可以选定构造方法创建实例</strong>。</p>
+<pre><code class="java">//获取 Person 类的 Class 对象
+Class clazz = Class.forName(&quot;reflection.Person&quot;); 
+//使用.newInstane 方法创建对象
+Person p = (Person) clazz.newInstance();
+
+//获取构造方法并创建对象（构造方法参数是对应类的Class对象）
+Constructor c = clazz.getDeclaredConstructor(String.class,String.class,int.class);
+//创建对象并设置属性
+Person p1 = (Person) c.newInstance(&quot;李四&quot;,&quot;男&quot;,20);</code></pre>
+<p><strong>（4.3）调用Class的方法（得到对应的反射API实例）</strong></p>
+<p>Class类中的<strong>getFields、getMethods和getConstructors方法</strong>将分别返回类提供的 public域、方法和构造器数组，其中包括超类的公有成员。</p>
+<p> Class 类的 <strong>getDeclareFields、getDeclareMethods 和 getDeclaredConstructors 方法</strong>将分别返回类中声明的全部域、方法和构造器， 其中包括私有和受保护成员，但不包括超类的成员。</p>
+<pre><code></code></pre><p><strong>（5）反射API的使用（Field Method Constructor）（用于检查类的结构）</strong></p>
+<p>这三个类都有一个叫做 getName 的方法，用来返回项目的名称。</p>
+<p>Method类有一 个 getType 方法，用来返回描述域所属类型的 Class 对象。 </p>
+<p>Method 和 Constructor 类有能够报告参数类型的方法， Method 类还有一个可以报告返回类型的方法。 </p>
+<p>这3个类还有一个叫 做 getModifiers 的方法，它将返回一个整型数值，用不同的位开关描述 public 和 static 这样 的修饰符使用状况。 </p>
+<p>另外， 还可以利用 java.lang.reflect 包中的 Modifier 类的静态方法分析 getModifiers 返回的整型数值。 例如， 可以使用 Modifier 类中的 isPublic、 isPrivate 或 isFinal 判断方法或构造器是否是 public、 private 或 final。 我们需要做的全部工作就是调用 Modifier 类的相应方法， 并对返回的整型数值进行分析， 另外，还可以利用 Modifier.toString 方法将修饰符打印出来。</p>
+<p><strong>（5.1）  运行时分析反射对象（查看修改数据域内容  Field类）</strong></p>
+<p>在编写程序时， 如果知道想要査看的域名 和类型， 查看指定的域是一件很容易的事情。而利用反射机制可以查看在编译时还不清楚的对象域。</p>
+<p><strong>（a）得到Field对象</strong></p>
+<ol>
+<li><p>使用getDeclaredFields方法来获得所有成员的一个Field对象数组，然后在进行查找</p>
+</li>
+<li><p>使用Class类的getField方法根据表示域名的字符串，返回一个 Field对象（<strong>要使用这个必须加上try-catch块</strong>）</p>
+</li>
+</ol>
+<pre><code></code></pre><p><strong>（b）查看和修改Field对象</strong></p>
+<p>查看和修改对象域的关键方法是 <strong>Field 类中的 get和set方法</strong>。 如果 f 是一个 Field 类型的对象(例如，通过 getDeclaredFields 得到的对象) obj 是某个包含 f 域的类的对象， <strong>f.get(obj) 将返回一个对象，其值为 obj 域的当前值</strong>。</p>
+<p>当然，可以获得就可以设置 调用 <strong>f.set(obj value) 可以将 obj 对象的 f 域设置成新值</strong></p>
+<pre><code class="java">Employee harry = new Employee(&quot;Harry Hacker&quot;, 35000, 10, 1, 1989);
+Class cl = harry.getClass();// 拿到了Employee的Class
+Field f = cl.getDeclaredField(&quot;name&quot;)://拿到了该类的指定成员的Filed对象
+Object v = f.get(harry);//使用该Field实例去用get方法获取某一个类的实例的指定成员的内容，并返回一个新的变量实例（注意是Object类型 要转换）
+// the value of the name field of the harry object, i .e., the String object &quot;Harry Hacker&quot;</code></pre>
+<p>实际上，这段代码存在一个问题。由于 name 是一个私有域， 所以 get 方法将会抛出一个 IllegalAccessException。 只有利用 get 方法才能得到可访问域的值。 <strong>除非拥有访问权限， 否则 Java 安全机制只允许査看任意对象有哪些域， 而不允许读取它们的值。(必须要加上try-catch块)</strong></p>
+<p>Field类使用还有很多内容，比如  对于基本类型获取，get方法可以自动打包，setAccessible 方法，编写通用 toString 方法**</p>
+<p><strong>（5.2）  调用任意方法（Method类）</strong></p>
+<p>在 C 和 C++ 中， 可以从函数指针执行任意函数。从表面上看， Java 没有提供方法指针， 即<strong>将一个方法的存储地址传给另外一个方法， 以便第二个方法能够随后调用它</strong>。事实上， Java 的设计者曾说过: 方法指针是很危险的， 并且常常会带来隐患。 他们认为 Java 提供的接口 (interface )是一种更好的解决方案。 然而，<strong>反射机制允许你调用任意方法</strong>。</p>
+<p><strong>（a）得到Method对象</strong></p>
+<ol>
+<li><p>可以通过调用 getDeclareMethods 方法， 然后对返回的 Method 对象数组进行查找， 直到发现想要的方法为止。</p>
+</li>
+<li><p>也可以通过调用 Class 类中的 getMethod 方法得到想要的方法。因为有可能存在若干个相同名字的方法，所以还必须提供想要的方法的参数类型。<strong>(必须要加上try-catch块)</strong></p>
+</li>
+</ol>
+<pre><code class="java">Method getMethod(String name, Class... parameterTypes)
+
+Method ml = Employee.class.getMethod(&quot;getName&quot;);
+Method m2 = Employee.class.getMethod(&quot;raiseSalary&quot;, double.class); </code></pre>
+<p><strong>（b）调用Method对象中的方法</strong></p>
+<p><strong>在 Method 类中有一个 invoke 方法， 它允许调用包装在当前 Method 对象中的方法。</strong></p>
+<p>invoke方法的签名是 <code>Object invoke(Object obj, Object... args)</code></p>
+<p>第一个参数是隐式参数， 其余的对象提供了显式参数</p>
+<p>对于静态方法， 第一个参数可以被忽略， 即可以将它设置为 null</p>
+<p>假设用 ml 代表 Employee 类的 getName 方法（是一个Method对象），下面这条语句显示了如何调用这个方法:</p>
+<pre><code class="java">String n = (String) ml.invoke(harry);</code></pre>
+<p> invoke 的参数和返回值<strong>必须是 Object 类型的</strong>。这就意味着必须进行多次的类型转换。 这样做将会使编译器错过检查代码的机会。 因此，等到测试阶段才会发现这些错误，找 到并改正它们将会更加困难。不仅如此，使用反射获得方法指针的代码要比仅仅直接调用方法明显慢一些。</p>
+<p>有鉴于此， 建议仅在必要的时候才使用 Method 对象，而<strong>最好使用接口以及 Java SE 8 中 的 lambda 表达式</strong></p>
+<p>建议 Java 开发者不要使用 Method 对象的回调功能。 使用接口进行回调会使得代码的执行速度更快， 更易于维护。<strong>（？不明白这是什么意思）</strong></p>
+<h3 id="4-包-类路径-注释-注解"><a href="#4-包-类路径-注释-注解" class="headerlink" title="4 包  类路径  注释  注解"></a>4 包  类路径  注释  注解</h3><p>Java 允许使用包 （package）将类组织起来。 借助于包可以方便地组织自己的代码， 并将 自己的代码与别人提供的代码库分开管理。</p>
+<p>标准的 Java 类库分布在多个包中， 包括 java.lang、java.util 和 java.net 等。 标准的 Java 包具有一个层次结构。 如同硬盘的目录嵌套一样， 也可以使用嵌套层次组织包。 所有标准的 Java 包都处于 java 和 javax 包层次中。</p>
+<p>一个类可以使用所属包中的所有类， 以及其他包中的公有类(public class。) 我们可以 采用两种方式访问另一个包中的公有类。 第一种方式是在每个类名之前添加完整的包名（很麻烦）。</p>
+<pre><code class="java">java.tiie.LocalDate today = java.tine.Local Date.now() ;</code></pre>
+<p>更简单且更常用的方式是使用 import 语句。 import 语句是一种引用包含 在包中的类的简明描述。 一旦使用了 import 语句， 在使用类时， 就不必写出包的全名了。</p>
+<p>可以使用 import 语句导人一个特定的类或者整个包。 import 语句应该位于源文件的顶部 ( 但位于 package 语句的后面 )。</p>
+<pre><code class="java">import java.util.*;
+
+LocalDate today = LocalDate.now();</code></pre>
+<p>在 C++中， 与 包 机 制 类 似 的 是 命 名 空 间(namespace)。 在 Java 中， package 与 import 语句类似于 C++中的 namespace 和 using 指令。</p>
+<p><strong>静态导入</strong></p>
+<p>import 语句不仅可以导入类， 还增加了导人静态方法和静态域的功能。（调用静态域和方法时更方便）</p>
+<pre><code class="java">import static java.lang.System.*;
+
+out.println(&quot;Goodbye, World!&quot;); // i.e., System
+e., System.exit exit(9); //i.</code></pre>
+<p>要想将一个类放人包中， 就必须将包的名字放在源文件的开头， 包中定义类的代码之前。</p>
+<pre><code class="java">package com.horstiann.corejava;
+
+public class Employee
+{
+}</code></pre>
+<p>如果没有在源文件中放置 package 语句， 这个源文件中的类就被放置在一个默认包 ( defaulf package ) 中。 默认包是一个没有名字的包。 </p>
+<p><strong>类路径</strong></p>
+<p>类存储在文件系统的子目录中。 类的路径必须与包名匹配。</p>
+<p>另外， 类文件也可以存储在 JAR(Java 归档 )文件中。 在一个 JAR 文件中， 可以包含 多个压缩形式的类文件和子目录， 这样既可以节省又可以改善性能。 在程序中用到第三方 ( third-party ) 的库文件时， 通常会给出一个或多个需要包含的 JAR 文件。JDK 也提供了许多 的 JAR 文件</p>
+<p>JAR 文件使用 ZIP 格式组织文件和子目录。可以使用所有 ZIP 实用程序查看内部 的 rt.jar 以及其他的 JAR 文件。</p>
+<p><strong>文档注释</strong></p>
+<p>JDK 包含一个很有用的工具， 叫做 javadoc, 它可以由源文件生成一个 HTML 文档。 </p>
+<p>如果在源代码中添加以专用的定界符 /** 开始的注释， 那么可以很容易地生成一个看上 去具有专业水准的文档。这是一种很好的方式， 因为这种方式可以将代码与注释保存在一个 地方。如果将文档存人一个独立的文件中， 就有可能会随着时间的推移， 出现代码和注释不 一致的问题。 然而， 由于文档注释与源代码在同一个文件中， 在修改源代码的同时， 重新运 行 javadoc 就可以轻而易举地保持两者的一致性。</p>
+<p>@author @param 等等</p>
+<p><strong>Java注解</strong></p>
+<p>Annotation(注解)是 Java 提供的一种对元程序中元素关联信息和元数据(metadata)（关于数据的数据）的途径和方法。Annatation(注解)是一个接口，程序可以通过<strong>反射</strong>来获取指定程序中元素的 Annotation对象，然后<strong>通过该 Annotation 对象来获取注解中的元数据信息</strong>。</p>
+<p>元注解的作用是负责注解其他注解。 Java5.0 定义了 4 个标准的 meta-annotation 类型，它们被用来提供对其它 annotation 类型作说明。</p>
+<p><strong>4种元注解（负责注解其他注解）</strong></p>
+<p><strong>@Target</strong> 修饰的对象范围</p>
+<p>@Target 说明了 Annotation 所修饰的对象范围: Annotation 可被用于 packages、types(类、</p>
+<p>接口、枚举、Annotation 类型)、类型成员(方法、构造方法、成员变量、枚举值)、方法参数</p>
+<p>和本地变量(如循环变量、catch 参数)。在 Annotation 类型的声明中使用了 target 可更加明晰</p>
+<p>其修饰的目标</p>
+<p><strong>@Retention</strong> 定义 被保留的时间长短</p>
+<p>Retention 定义了该 Annotation 被保留的时间长短:表示需要在什么级别保存注解信息，用于描</p>
+<p>述注解的生命周期(即:被描述的注解在什么范围内有效)，取值(RetentionPoicy)由:</p>
+<p>SOURCE:在源文件中有效(即源文件保留)</p>
+<p>CLASS:在 class 文件中有效(即 class 保留)</p>
+<p>RUNTIME:在运行时有效(即运行时保留)</p>
+<p><strong>@Documented</strong> 􏰁描述<strong>javadoc</strong></p>
+<p>@ Documented 用于描述其它类型的 annotation 应该被作为被标注的程序成员的公共 API，因此可以被例如 javadoc 此类的工具文档化。</p>
+<p><strong>@Inherited</strong> 阐述了某个被标注的类型是被继承的</p>
+<p>@Inherited 元注解是一个标记注解，@Inherited 阐述了某个被标注的类型是被继承的。如果一个使用了@Inherited 修饰的 annotation 类型被用于一个 class，则这个 annotation 将被用于该class 的子类。</p>
+<p><strong>3种标准注解</strong></p>
+<p><strong>@override</strong> 函数重写</p>
+<p><strong>@Deprecated</strong> 对不应该再使用的方法做注释</p>
+<p><strong>@SuppressWarnings</strong> 关闭特定警告信息（有参数）</p>
+<p><strong>注解处理器</strong></p>
+<p>如果没有用来读取注解的方法和工作，那么注解也就不会比注释更有用处了。使用注解的过程中，很重要的一部分就是创建和使用注解处理器（利用元注解）</p>
+<pre><code class="java">/1:*** 定义注解*/ 
+  @Target(ElementType.FIELD) 
+  @Retention(RetentionPolicy.RUNTIME)
+  @Documented
+public @interface FruitProvider {
+/**供应商编号*/
+public int id() default -1; /*** 供应商名称*/
+public String name() default &quot;&quot;;
+/** * 供应商地址*/
+public String address() default &quot;&quot;;
+}
+//2:注解使用
+public class Apple {
+@FruitProvider(id = 1, name = &quot;陕西红富士集团&quot;, address = &quot;陕西省西安市延安路&quot;)
+private String appleProvider;
+public void setAppleProvider(String appleProvider) {
+this.appleProvider = appleProvider; }
+public String getAppleProvider() { return appleProvider;
+}
+}
+/3:*********** 注解处理器 ***************/
+public class FruitInfoUtil {
+public static void getFruitInfo(Class&lt;?&gt; clazz) {
+String strFruitProvicer = &quot;供应商信息:&quot;;
+Field[] fields = clazz.getDeclaredFields();//通过反射获取处理注解
+for (Field field : fields) {
+if (field.isAnnotationPresent(FruitProvider.class)) {
+FruitProvider fruitProvider = (FruitProvider) field.getAnnotation(FruitProvider.class); //注解信息的处理地方
+strFruitProvicer = &quot; 供应商编号:&quot; + fruitProvider.id() + &quot; 供应商名称:&quot;
++ fruitProvider.name() + &quot; 供应商地址:&quot;+ fruitProvider.address();
+System.out.println(strFruitProvicer); }
+} }
+ }
+ public class FruitRun {
+public static void main(String[] args) {
+FruitInfoUtil.getFruitInfo(Apple.class); /***********输出结果***************/
+// 供应商编号:1 供应商名称:陕西红富士集团 供应商地址:陕西省西安市延 }
+}</code></pre>
+<h3 id="5-日志-断言-调试"><a href="#5-日志-断言-调试" class="headerlink" title="5 日志 断言 调试"></a>5 日志 断言 调试</h3><h3 id="6-Java序列化（创建可复用的Java对象）"><a href="#6-Java序列化（创建可复用的Java对象）" class="headerlink" title="6  Java序列化（创建可复用的Java对象）"></a>6  Java序列化（创建可复用的Java对象）</h3><p><strong>Java 平台允许我们在内存中创建可复用的 Java 对象，但一般情况下，只有当 JVM 处于运行时，这些对象才可能存在</strong>，即，这些对象的生命周期不会比 JVM 的生命周期更长。但在现实应用中，<strong>就可能要求在 JVM 停止运行之后能够保存(持久化)指定的对象，并在将来重新读取被保存的对象</strong>。Java 对象序列化就能够帮助我们实现该功能。</p>
+<p>使用 Java 对象序列化，<strong>在保存对象时，会把其状态保存为一组字节，在未来，再将这些字节组装成对象</strong>。必须注意地是，<strong>对象序列化保存的是对象的”状态”，即它的成员变量。由此可知，对象序列化不会关注类中的静态变量</strong>。</p>
+<p>除了在<strong>持久化对象</strong>时会用到对象序列化之外，当使用 <strong>RMI(远程方法调用)</strong>，或在<strong>网络中传递对象</strong>时，都会用到对象序列化。<strong>Java 序列化 API 为处理对象序列化提供了一个标准机制</strong>，该 API 简单易用。</p>
+<p><strong>Serializable</strong> 实现序列化</p>
+<p>在 Java 中，只要一个类实现了 java.io.Serializable 接口，那么它就可以被序列化。</p>
+<p>通过 ObjectOutputStream 和 ObjectInputStream 对对象进行序列化及反序列化。</p>
+<p>在类中增加 writeObject 和 readObject 方法可以实现自定义序列化策略。</p>
+<p><strong>序列化ID</strong></p>
+<p>虚拟机是否允许反序列化，不仅取决于类路径和功能代码是否一致，一个非常重要的一点是两个类的序列化 ID 是否一致(就是 private static final long serialVersionUID)</p>
+<p><strong>Transient</strong> 关键字阻止该变量被序列化到文件中</p>
+<p>在变量声明前加上Transient 关键字，可以阻止该变量被序列化到文件中，在被反序列化后，transient 变量的值被设为初始值，如 int 型的是 0，对象型的是 null。</p>
+<p>服务器端给客户端发送序列化对象数据，对象中有一些数据是敏感的，比如密码字符串等，希望对该密码字段在序列化时，进行加密，而客户端如果拥有解密的密钥，只有在客户端进行反序列化时，才可以对密码进行读取，这样可以一定程度保证序列化对象的数据安全。</p>
+
+            <hr>
+          </div>
+          <br>
+          <div>
+            <p>
+            
+            
+              <span>
+                <i class="iconfont icon-tag"></i>
+                
+                  <a class="hover-with-bg" href="/tags/Java%E5%9F%BA%E7%A1%80">Java基础</a>
+                
+              </span>
+            
+            </p>
+            
+              <p class="note note-warning">本博客所有文章除特别声明外，均采用 <a href="https://zh.wikipedia.org/wiki/Wikipedia:CC_BY-SA_3.0%E5%8D%8F%E8%AE%AE%E6%96%87%E6%9C%AC" target="_blank" rel="nofollow noopener noopener">CC BY-SA 3.0协议</a> 。转载请注明出处！</p>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="d-none d-lg-block col-lg-2 toc-container">
+      
+  <div id="toc">
+    <p class="h4"><i class="far fa-list-alt"></i>&nbsp;目录</p>
+    <div id="tocbot"></div>
+  </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- custom -->
+
+
+<!-- Comments -->
+<div class="col-lg-7 mx-auto nopadding-md">
+  <div class="container comments mx-auto" id="comments">
+    
+  </div>
+</div>
+
+    
+  </main>
+
+  
+    <a class="z-depth-1" id="scroll-top-button" href="#" role="button">
+      <i class="fa fa-chevron-up scroll-top-arrow" aria-hidden="true"></i>
+    </a>
+  
+
+  
+    <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+  
+
+  <footer class="mt-5">
+  <div class="text-center py-3">
+    <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><b>Hexo</b></a>
+    <i class="iconfont icon-love"></i>
+    <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"> <b>Fluid</b></a>
+    <br>
+
+    
+  
+    <!-- 不蒜子统计PV -->
+    
+    &nbsp;<span id="busuanzi_container_site_pv"></span>总访问量 
+          <span id="busuanzi_value_site_pv"></span> 次&nbsp;
+  
+  
+    <!-- 不蒜子统计UV -->
+    
+    &nbsp;<span id="busuanzi_container_site_uv"></span>总访客数 
+            <span id="busuanzi_value_site_uv"></span> 人&nbsp;
+  
+  <br>
+
+
+
+    
+
+
+    <!-- cnzz Analytics icon -->
+    
+
+  </div>
+</footer>
+
+<!-- SCRIPTS -->
+<script src="/lib/jquery/jquery.min.js" ></script>
+<script src="/lib/popper/popper.min.js" ></script>
+<script src="/lib/bootstrap/js/bootstrap.min.js" ></script>
+<script src="/lib/mdbootstrap/js/mdb.min.js" ></script>
+<script src="/js/main.js" ></script>
+
+
+  <script src="/js/lazyload.js" ></script>
+
+
+
+  
+    <script src="/lib/tocbot/tocbot.min.js" ></script>
+  
+  <script src="/js/post.js" ></script>
+
+
+
+  <script src="/lib/smoothscroll/SmoothScroll.min.js" ></script>
+
+
+
+  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+<!-- Plugins -->
+
+
+  
+
+  
+
+  
+
+  
+
+  <!-- cnzz Analytics -->
+  
+
+
+
+  <script src="/lib/prettify/prettify.min.js" ></script>
+  <script>
+    $(document).ready(function () {
+      $('pre').addClass('prettyprint  linenums');
+      prettyPrint();
+    })
+  </script>
+
+
+
+  <script src="/lib/typed/typed.min.js" ></script>
+  <script>
+    var typed = new Typed('#subtitle', {
+      strings: [
+        '  ',
+        "Java其他特性&nbsp;",
+      ],
+      cursorChar: "_",
+      typeSpeed: 70,
+      loop: false,
+    });
+    typed.stop();
+    $(document).ready(function () {
+      $(".typed-cursor").addClass("h2");
+      typed.start();
+    });
+  </script>
+
+
+
+  <script src="/lib/anchor/anchor.min.js" ></script>
+  <script>
+    anchors.options = {
+      placement: "right",
+      visible: "false",
+      
+    };
+    var el = "h1,h2,h3,h4,h5,h6".split(",");
+    var res = [];
+    for (item of el) {
+      res.push(".markdown-body > " + item)
+    }
+    anchors.add(res.join(", "))
+  </script>
+
+
+
+  <script src="/js/local-search.js" ></script>
+  <script>
+    var path = "/local-search.xml";
+    var inputArea = document.querySelector("#local-search-input");
+    inputArea.onclick = function () {
+      getSearchFile(path);
+      this.onclick = null
+    }
+  </script>
+
+
+
+  <script src="/lib/fancybox/jquery.fancybox.min.js" ></script>
+  <script>
+    $("#post img:not(.no-zoom img, img[no-zoom])").each(
+      function () {
+        var element = document.createElement("a");
+        $(element).attr("data-fancybox", "images");
+        $(element).attr("href", $(this).attr("src"));
+        $(this).wrap(element);
+      }
+    );
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
